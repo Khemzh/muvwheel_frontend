@@ -1,135 +1,45 @@
-import { CgSpinner } from 'react-icons/cg'
-import OtpInput from 'otp-input-react'
-import { useState } from 'react'
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
-import { auth } from './firebase.config'
-import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth'
-import { toast, Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const App = () => {
-  const [otp, setOtp] = useState('')
-  const [ph, setPh] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [showOTP, setShowOTP] = useState(false)
-  const [user, setUser] = useState(null)
   const navigate = useNavigate()
+  const [isLogin, setIsLogin] = useState(false)
+  const [uid, setUid] = useState('')
 
-  function onCaptchVerify() {
-    if (!window.recaptchaVerifier) {
-      window.recaptchaVerifier = new RecaptchaVerifier(
-        'recaptcha-container',
-        {
-          size: 'invisible',
-          callback: (response) => {
-            // onSignup();
-          },
-          'expired-callback': () => {},
-        },
-        auth,
-      )
+  useEffect(() => {
+    let user = localStorage.getItem('user')
+    if (user) {
+      setIsLogin(true)
+      setUid(user)
     }
+  }, [])
+
+  const handleBtnClick = () => {
+    navigate('/authen')
   }
 
-  function onSignup() {
-    setLoading(true)
-    onCaptchVerify()
-
-    const appVerifier = window.recaptchaVerifier
-
-    const formatPh = '+' + ph
-
-    signInWithPhoneNumber(auth, formatPh, appVerifier)
-      .then((confirmationResult) => {
-        window.confirmationResult = confirmationResult
-        setLoading(false)
-        setShowOTP(true)
-
-        toast.success('ส่ง otp แล้ว')
-      })
-      .catch((error) => {
-        console.log(error)
-        setLoading(false)
-
-        alert('request เยอะไปรอแปป')
-      })
-  }
-
-  async function onOTPVerify() {
-    setLoading(true)
-    window.confirmationResult
-      .confirm(otp)
-      .then(async (res) => {
-        console.log(res)
-        setUser(res.user)
-        setLoading(false)
-        localStorage.setItem('user', user)
-
-        navigate('/create')
-      })
-      .catch((err) => {
-        console.log(err)
-
-        setLoading(false)
-      })
-  }
-
-  return (
-    <section>
-      <div className="m-5">
-        <Toaster toastOptions={{ duration: 4000 }} />
-        <div id="recaptcha-container"></div>
-        {user ? (
-          <div>
-            <p>login แล้ว</p>
-            <p>uid : {user.uid}</p>
-            <p>phone number : {user.uid}</p>
-          </div>
-        ) : (
-          <div>
-            <p>เบอ</p>
-            {showOTP ? (
-              <>
-                <label htmlFor="otp">ใส่ otp</label>
-                <OtpInput
-                  value={otp}
-                  onChange={setOtp}
-                  OTPLength={6}
-                  otpType="number"
-                  disabled={false}
-                  autoFocus
-                  className="opt-container"
-                ></OtpInput>
-                <button
-                  onClick={onOTPVerify}
-                  className="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                >
-                  {loading && (
-                    <CgSpinner size={20} className="mt-1 animate-spin" />
-                  )}
-                  <span>ยืนยัน</span>
-                </button>
-              </>
-            ) : (
-              <>
-                <PhoneInput country={'th'} value={ph} onChange={setPh} />
-                <button
-                  onClick={onSignup}
-                  className="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                >
-                  {loading && (
-                    <CgSpinner size={20} className="mt-1 animate-spin" />
-                  )}
-                  <span>ส่ง otp</span>
-                </button>
-              </>
-            )}
-          </div>
-        )}
+  if (isLogin) {
+    return (
+      <div className="p-4">
+        <p>muvwheel</p>
+        <br />
+        <p>id ของคุณคือ {uid}</p>
+        <p>ด้านล่างคือแผนที่</p>
       </div>
-    </section>
-  )
+    )
+  } else {
+    return (
+      <div className="p-4">
+        <p>muvwheel</p>
+        <button
+          onClick={handleBtnClick}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+        >
+          เข้าสู่ระบบ
+        </button>
+      </div>
+    )
+  }
 }
 
 export default App
