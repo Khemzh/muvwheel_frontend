@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Error from './Error'
+import axios from 'axios'
 
 const CreateProfile = () => {
   const [isLogin, setIsLogin] = useState(false)
@@ -11,13 +13,30 @@ const CreateProfile = () => {
   const [date, setDate] = useState('')
   const [gender, setGender] = useState('male')
 
+  const navigate = useNavigate()
+
   const onFormSubmit = (e) => {
     e.preventDefault()
 
-    console.log(name)
-    console.log(surname)
-    console.log(date)
-    console.log(gender)
+    let payload = {
+      name: name,
+      surname: surname,
+      date: date,
+      gender: gender,
+      ph: ph,
+      uid: uid,
+    }
+
+    axios
+      .post('http://127.0.0.1:3001/register', payload)
+      .then((res) => {
+        if (res.status == 200) {
+          navigate('/')
+        }
+      })
+      .catch((e) => {
+        alert('cant connect to server')
+      })
   }
 
   useEffect(() => {
