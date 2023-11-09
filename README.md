@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Topic of content
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [setup](#setup)
+- [workflows](#workflows)
+- [story point](#story-point)
+---
+<a id="setup"></a>
+## setup
+ 1. เพื่อให้ชีวิตง่ายไปใช้ github desktop
+ 2. clone repo backend เลือกเป็น branch product
+ 3. เลือก branch dev  
+    ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/8f291ef7-c676-4027-bd38-f68f4c86fc52)  
+ 5. กด new branch แล้วตั้งชื่อของตัวเอง **(เลือก branch dev ด้วย)**
+ 6. กด publish branch
+    ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/35c2452b-7b1a-4278-8b5f-6c5a091e3364)
+---
+<a id="workflows"></a>
+## workflows
+หลังจากที่ทำโค้ดเสร็จแล้วหรือต้องการจะเอา branch ตัวเองเข้า branch dev
+ 1. commit branch ตัวเอง  
+    1.1. เข้าไปที่ github desktop ดูให้ดีว่าอยู่ใน branch ตัวเอง
+         ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/c94a75f2-5652-489a-b7bb-789a9427f89c)  
 
-## Available Scripts
+    1.2. เขียน summary ของโค้ดที่ตัวเองทำ (หา emoji มาใส่เพื่อให้โดดเด่นด้วย [gitmoji](https://gitmoji.dev/) )
+         ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/0b84ba49-f4df-492b-90ad-d271ac6c31e6)  
+    1.3 กด commit
+ 2. อัพเดท dev ให้เป็นปัจจุบัน
+    2.1 เปลี่ยน branch เป็น dev  
+        ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/6ec349ce-3427-4412-a63e-b11b99fe775a)  
+    2.2 กด fetch origin หรือ pull เพื่ออัพเดท  
+        ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/0bc2c8f1-28ba-4d80-a85f-20600b29ad27)  
+    2.3 สลับ branch ให้เป็นของตัวเอง
+ 3. ทำ FastForward เพื่อทำให้โค้ดใน branch ตัวเองอัพเดทตาม dev
+    3.1 เข้า terminal พิม
+    ```bash
+    git merge --ff dev
+    ```
+ 4. PR bramch ตัวเอง เข้า branch dev
+    4.1 ที่ GitHub desktop กด Create pull/request
+        ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/4ade263c-d05b-4435-b1a1-f3b9f89411bd)  
+    4.2 จะเด้งไปหน้า web GitHub ให้เลือก branch ตัวเอง เข้า branch dev และกด creat pull request
+        ![image](https://github.com/Khemzh/muvwheel_backend/assets/65082010/a280633d-169d-4da4-a4ea-796db0f7224e)
+ 5. รอ Adviser มากด commit (แจ้ง PM ก็ได้) 
+---
+<a id="story-point"></a>
+## story point
+1 half hour (30 min.)  
+2 few minutes (0:30 - 1:30)  
+3 few hours (3 hours)  
+5 half-day (4:30)  
+8 a day (8 hours)  
+13 2 days (16 hours)  
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
