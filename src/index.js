@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ChatHistory from './Pages/ChatHistory'
+import ShowPath from './Pages/ShowPath';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ChatHistory />
+    <ShowPath />
   </React.StrictMode>
 );
 

@@ -7,7 +7,7 @@ function App() {
       <div className='bg'>
         <div className='circle'>
           <div className = 'helpBus'>
-              HELP BUS
+              MUVWHEEL
           </div>
         </div>
         <img className='photo' src ="/img/disabled-guy.png" alt=" " />
