@@ -2,9 +2,7 @@ import './ShowPath.css';
 import React, { useState,useEffect } from 'react';
 
 
-function App() {
-
-
+export default function ShowPath() {
   return (
     <div className="App">
       <div className='bg'>
@@ -14,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
