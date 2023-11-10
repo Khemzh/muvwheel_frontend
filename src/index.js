@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import PaidSuccess from './Pages/PaidSuccess'
+import Paid from './Pages/Paid'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PaidSuccess />
+    <Paid />
   </React.StrictMode>
 );
 
