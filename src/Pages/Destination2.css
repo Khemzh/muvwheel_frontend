@@ -30,6 +30,10 @@
     width: 50px;
     height: 50px;
 }
+.gb{
+    width: 50px;
+    height: 50px;
+}
 .findway{
     margin-right: 290px;
     font-size: 50px;
@@ -148,7 +152,7 @@
     border: 1px solid #B0B0B0;
     width: 800px;
     height: 80px;
-    margin-left: -155px;
+    margin-left: -152px;
     
 }
 .lastsearchpath{
