@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Paid from './Pages/Paid'
+import Destination from './Pages/Destination'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Paid />
+    <Destination />
   </React.StrictMode>
 );
 
