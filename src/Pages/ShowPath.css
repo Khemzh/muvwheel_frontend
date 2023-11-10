@@ -1,15 +1,22 @@
 .App {
     text-align: center;
   }
-  .bg{
-  
+.bg{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 390px;
-    height: 844px;
+    width: 1080px;
+    height: 1710px;
     background-color: #0032C8;
   }
+.header{
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+
+
+
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
