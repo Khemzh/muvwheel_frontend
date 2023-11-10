@@ -10,60 +10,59 @@
     
     margin-left: auto;
     margin-right: auto;
-    width: 990px;
-    height: 2340px;
+    width: 980px;
+    height: 1800px;
     background-color: aliceblue;
     border-radius: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
     
 }
 
 .body {
     margin-left: auto;
     margin-right: auto;
-    width: 990px;
-    height: 200px;
+    width: 980px;
+    height: 150px;
     /* margin-top: 100px; */
     background-color: #0032C8;
     padding-top: 40px;
 }
 
 .howtopay {
-    
-    margin-right: 200px;
-    font-size: 70px;
-    font-family: "Poppins", cursive;
-    color: rgb(0, 0, 0);
-}
-
-.pay {
-    margin-top: 170px;
+    margin-right: 210px;
     font-size: 50px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
 }
 
+.pay {
+    margin-top: 140px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+
 .qrcode {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     background-color: #000000;
 }
 .goback{
-    margin-right: 140px;
-    width: 60px;
-    height: 30px;
+    margin-right: 190px;
+    width: 50px;
+    height: 50px;
 }
 .cancle{
-    font-size: 60px;
+    font-size: 40px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
-    width: 900px;
+    width: 800px;
     height: 100px;
     border-radius: 100px;
-    margin-top:800px;
+    margin-top:400px;
     background-color: #0032C8;
 }
 
@@ -76,7 +75,7 @@
 
 }
 .done{
-    font-size: 50px;
+    font-size: 40px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
     width: 600px;
