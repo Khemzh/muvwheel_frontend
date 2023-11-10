@@ -14,7 +14,7 @@
 }
 
 .body {
-    margin-left: 2000px;
+    
     margin-right: auto;
     width: 1080px;
     height: 200px;
@@ -24,7 +24,7 @@
 }
 
 .howtopay {
-    
+    margin-right: 100px;
     
     font-size: 70px;
     font-family: "Poppins", cursive;
@@ -33,7 +33,7 @@
 
 
 .goback{
-    margin-right: 160px;
+    margin-right: 130px;
     width: 60px;
     height: 30px;
 }
@@ -41,14 +41,14 @@
     margin-top: 500px;
     width: 200px;
     height: 200px;
-    margin-left: 2450px;
+    margin-left: 400px;
 }
 .pay{
     margin-top: 50px;
     font-size: 60px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
-    margin-left: 190px;
+    margin-left: 120px;
 }
 
 .App {
