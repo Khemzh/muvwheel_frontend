@@ -1,0 +1,59 @@
+.App {
+    font-family: "Poppins", cursive;
+}
+.bg {
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 390px;
+    height: 935px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    
+}
+
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 390px;
+    height: 70px;
+    /* margin-top: 100px; */
+    background-color: #0032C8;
+    padding-top: 40px;
+}
+
+.howtopay {
+    /* margin-top: 10px; */
+    margin-right: 65px;
+    font-size: 25px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+
+
+.goback{
+    margin-right: 65px;
+    width: 20px;
+    height: 10px;
+}
+.success{
+    margin-top: 200px;
+    width:100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pay{
+    
+    font-size: 35px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+
+.App {
+    text-align: center;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
+}

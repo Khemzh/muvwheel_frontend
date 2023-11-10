@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+.bg{
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1080px;
+    height: 2340px;
+  background-color: #ffffff;
+}
+
+.circle{
+  /* height: 600px;
+  width: 600px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 40px; */
+  margin-left:200px;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 0 0 0 1200px;
+  background-color: #0032C8
+  
+}
+
+.helpBus{
+  font-size: 100px;
+  padding-top: 400px;
+  padding-left: 300px;
+  font-family: "Poppins", cursive;
+  color: aliceblue;
+  
+}
+
+.photo{
+  margin-top:-500px;
+  margin-left: 200px;
+  width: 1000px;
+  height: 1200px;
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(../public/Poppins/Poppins-Black.ttf) format('truetype');
+}
