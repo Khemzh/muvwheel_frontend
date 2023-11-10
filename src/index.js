@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ChatHistory from './Pages/ChatHistory'
+import Paid from './Pages/Paid'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ChatHistory />
+    <Paid />
   </React.StrictMode>
 );
 
