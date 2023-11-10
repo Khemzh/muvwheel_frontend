@@ -1,6 +1,10 @@
 .App {
     font-family: "Poppins", cursive;
 }
+.App {
+    text-align: center;
+}
+
 .bg {
     
     margin-left: auto;
@@ -14,8 +18,9 @@
 }
 
 .body {
-    
+    margin-left: auto;
     margin-right: auto;
+   
     width: 1080px;
     height: 200px;
     /* margin-top: 100px; */
@@ -24,8 +29,7 @@
 }
 
 .howtopay {
-    margin-right: 100px;
-    
+    margin-right: 70px;
     font-size: 70px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
@@ -33,7 +37,7 @@
 
 
 .goback{
-    margin-right: 130px;
+    margin-right: 160px;
     width: 60px;
     height: 30px;
 }
@@ -42,6 +46,8 @@
     width: 200px;
     height: 200px;
     margin-left: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .pay{
     margin-top: 50px;
