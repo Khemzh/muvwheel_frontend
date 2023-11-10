@@ -15,11 +15,11 @@ function Destination2() {
                     </div>
 
                 </div>
-                <div class="lastsearch">ค้นหาล่าสุด
+                <div class="lastsearch"><p class = "lstext">ค้นหาล่าสุด</p>
                     <ul>
                         <ol>
                             <button class="ls">
-                                <button class="close"><img src="/picture/icon-close-512 1.png"></img></button>
+                                <button class="close"><img class = "c" src="/picture/icon-close-512 1.png"></img></button>
                                 <div class="box"><button class="star"><img class="starf" src="/picture/Star_fill.png"></img>
                                 </button>
                                     <p class="lastsearchpath">สยามพารากอน</p></div>
@@ -30,16 +30,16 @@ function Destination2() {
                         </ol>
                     </ul>
                 </div>
-                <div class="save">เส้นทางที่บันทึก
+                <div class="save"><p class = "savetext">เส้นทางที่บันทึก</p>
                     <ul>
-                        <li>
+                        <ol>
                             <button class="s">
-                                <button class="close"><img src="/picture/icon-close-512 1.png"></img></button>
+                                <button class="close"><img class = "c" src="/picture/icon-close-512 1.png"></img></button>
                                 <div class="box"><button class="star"><img class="starf" src="/picture/Star_fill.png"></img>
                                 </button>
                                     <p class="savepath">ม.เกษตร</p></div>
                             </button>
-                        </li>
+                        </ol>
                     </ul>
                 </div>
 

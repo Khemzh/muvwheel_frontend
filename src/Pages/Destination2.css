@@ -13,26 +13,26 @@
 .bg {
     margin-left: auto;
     margin-right: auto;
-    width: 430px;
-    height: 924px;
+    width: 980px;
+    height: 1800px;
     background-color: aliceblue;
     
 }
 .pathbox{
-    width: 430px;
-    height: 246px;
+    width: 980px;
+    height: 446px;
     background-color: #0032C8;
     border-radius: 20px;
 }
 .goback{
     margin-top: 20px;
-    margin-right: 105px;
-    width: 30px;
-    height: 30px;
+    margin-right: 250px;
+    width: 50px;
+    height: 50px;
 }
 .findway{
-    margin-right: 135px;
-    font-size: 25px;
+    margin-right: 290px;
+    font-size: 50px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
@@ -42,17 +42,19 @@
 }
 .up{
     /* padding-top: 10px; */
-    margin-top: 40px;
-    margin-left: 20px;
-    width: 20px;
-    height: 20px;
+    margin-top: 80px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
 }
 .position{
-    margin-top: 30px;
+    margin-top: 70px;
     margin-left: 10px;
-    width: 352px;
-    height: 48px;
+    width: 800px;
+    height: 80px;
     border-radius: 10px;
+    font-size: 30px;
+    font-family: "Poppins", cursive;
 }
 .df{
     display: flex;
@@ -60,89 +62,108 @@
 }
 .flag{
     margin-top: 50px;
-    margin-left: 20px;
-    width: 20px;
-    height: 20px;
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
 }
 .destination{
     margin-top: 40px;
     margin-left: 10px;
-    width: 352px;
-    height: 48px;
+    width: 800px;
+    height: 80px;
     border-radius: 10px;
+    font-size: 30px;
+    font-family: "Poppins", cursive;
 
 }
 .lastsearch{
-    margin-right: 300px;
+    display: flex;
+    
+}
+.lstext{
+    margin-left: 40px;
     margin-top: 30px;
-    font-size: 15px;
+    font-size: 30px;
+    font-family: "Poppins", cursive;
+    color: #B0B0B0;
+}
+.savetext{
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 30px;
     font-family: "Poppins", cursive;
     color: #B0B0B0;
 }
 .search{
     background-color: #0032C8;
-    width: 232px;
-    height: 71px;
-    margin-top: 60px;
+    width: 400px;
+    height: 130px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 20px;
+    font-size: 40px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
 .ls{
-    margin-top: 10px;
+    margin-top: 80px;
     border: 1px solid #B0B0B0;
-    width: 388px;
-    height: 52px;
-    margin-left: 20px;
+    width: 800px;
+    height: 80px;
+    margin-left: -100px;
     
 }
 .close{
-    margin-left: 372px;
-    
-    width: 10px;
-    height: 12px;
+    margin-left: 752px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
 
+}
+.c{
+    width: 20px;
+    height: 20px;
 }
 
 .starf{
     margin-right: 10px;
+    width: 50px;
+    height: 50px;
 }
 .star{
     display: flex;
-    margin-top: -5px;
+    margin-top: -15px;
+    width: 50px;
+    height: 50px;
 }
 
 .save{
-    margin-right: 300px;
-    margin-top: 30px;
-    font-size: 15px;
-    font-family: "Poppins", cursive;
-    color: #B0B0B0;
+    display: flex;
 }
+    
+    
 .s{
-    margin-top: 10px;
+    margin-top: 80px;
     border: 1px solid #B0B0B0;
-    width: 388px;
-    height: 52px;
-    margin-left: 20px;
+    width: 800px;
+    height: 80px;
+    margin-left: -155px;
     
 }
 .lastsearchpath{
-    margin-top: -28px;
-    font-size: 17px;
+    margin-top: -53px;
+    font-size: 30px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -200px;
+    margin-left: -450px;
 }
 .savepath{
-    margin-top: -28px;
-    font-size: 17px;
+    margin-top: -53px;
+    font-size: 30px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -240px;
+    margin-left: -520px;
 }
 .box{
     display: block;

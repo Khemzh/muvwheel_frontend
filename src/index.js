@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Destination from './Pages/Destination'
+import Destination2 from './Pages/Destination2'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Destination />
+    <Destination2 />
   </React.StrictMode>
 );
 
