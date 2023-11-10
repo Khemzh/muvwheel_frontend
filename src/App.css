@@ -18,27 +18,28 @@
   border-radius: 50%;
   display: inline-block;
   margin-left: 40px; */
-  margin-left:30px;
-  width: 360px;
-  height: 340px;
-  border-radius: 0 0 0 400px;
+  margin-left:200px;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 0 0 0 1200px;
   background-color: #0032C8
   
 }
 
 .helpBus{
-  font-size: 35px;
-  padding-top: 100px;
-  padding-left: 50px;
+  font-size: 100px;
+  padding-top: 400px;
+  padding-left: 300px;
   font-family: "Poppins", cursive;
   color: aliceblue;
   
 }
 
 .photo{
-  margin-top:-140px;
-  width: 320px;
-  height: 410px;
+  margin-top:-500px;
+  margin-left: 200px;
+  width: 1000px;
+  height: 1200px;
   
 }
 

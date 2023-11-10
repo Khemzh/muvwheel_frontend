@@ -15,7 +15,7 @@ const PopupMenu = () => {
   const [val, setVal] = useState('ต้องการจะไปที่ไหน ?')
 
 const [listBus,listbus] = useState(<div className='showBus' onClick={() => click(mainbox)}> 
-        <img className='bus' src ="/img/bus.png" alt=" " />
+        <img className='bus' src ="/img/icon _car outline_.png" alt=" " />
         <div className='listOfBus'>
               <p className='number'>
                   50
@@ -32,7 +32,7 @@ const [listBus,listbus] = useState(<div className='showBus' onClick={() => click
 )
 const [mainbox, setmain] = useState(<div>
         <button className='busClick'  onClick={() => click(listBus)}> 
-        <img className='bus1' src ="/img/bus.png" alt=" " /></button> 
+        <img className='bus1' src ="/img/icon _car outline_.png" alt=" " /></button> 
 
         </div>
 )
@@ -50,7 +50,7 @@ const click1 = mainbox => {
       <div className='bg'>
         <div className='header'>
         <div class="dp">
-      <button className = "bbb" onClick={togglePopup}><img src="/img/icon _menu_.png"></img></button>
+      <button className = "bbb" onClick={togglePopup}><img className='bt' src="/img/icon _menu_.png"></img></button>
       {isPopupVisible && (
         <div className="popup-menu">
           <ul>
