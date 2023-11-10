@@ -17,8 +17,8 @@ function PaidSuccess() {
                 </button>
                 เลือกวิธีการชำระเงิน
             </p>
-            <p class="success">
-                        <img src="/picture/Untitled.png"></img>
+            <p >
+                        <img class="success" src="/picture/Untitled.png"></img>
                     </p>
             <p class="pay">
                     ชำระเงินสำเร็จ

@@ -12,7 +12,7 @@ function ChatHistory() {
         <div className="App">
             <div class="bg">
                 <div class="head">
-                    <button class="back"><img src="/picture/Arrow-left.png"></img></button>
+                    <button class="back"><img src="/picture/arrow-left.png"></img></button>
                     <p class="contact">Chat</p>
                     <button class="search"><img src="/picture/search-normal.png"></img></button>
                 </div>
