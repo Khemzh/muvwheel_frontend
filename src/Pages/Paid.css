@@ -10,7 +10,7 @@
     
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    width: 990px;
     height: 2340px;
     background-color: aliceblue;
     border-radius: 50px;
@@ -21,7 +21,7 @@
 .body {
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    width: 990px;
     height: 200px;
     /* margin-top: 100px; */
     background-color: #0032C8;
@@ -63,7 +63,7 @@
     width: 900px;
     height: 100px;
     border-radius: 100px;
-    margin-top:1000px;
+    margin-top:800px;
     background-color: #0032C8;
 }
 
@@ -75,7 +75,16 @@
     color: aliceblue;
 
 }
-
+.done{
+    font-size: 50px;
+    font-family: "Poppins", cursive;
+    color: rgb(255, 255, 255);
+    width: 600px;
+    height: 100px;
+    border-radius: 100px;
+    margin-top:100px;
+    background-color: #0032C8;
+}
 .imgDisabled {
     margin-left: -100px;
 }

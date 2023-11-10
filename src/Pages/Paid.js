@@ -23,6 +23,7 @@ function Paid() {
                 <p class="qrcode">
                     {/* qr */}
                 </p>
+                <button class = "done">ชำระเงินเรียบร้อย</button>
                 <p>
                     <button class="cancle">
                         ยกเลิก
