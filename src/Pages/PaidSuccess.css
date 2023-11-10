@@ -10,10 +10,10 @@
     margin-left: auto;
     margin-right: auto;
     width: 990px;
-    height: 1500px;
+    height: 1800px;
     background-color: aliceblue;
     border-radius: 50px;
-    margin-top: 0px;
+    margin-top: 50px;
     
 }
 
@@ -22,24 +22,24 @@
     margin-right: auto;
    
     width: 990px;
-    height: 100px;
+    height: 150px;
     /* margin-top: 100px; */
     background-color: #0032C8;
     padding-top: 40px;
 }
 
 .howtopay {
-    margin-right: 250px;
-    font-size: 40px;
+    margin-right: 210px;
+    font-size: 50px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
 }
 
 
 .goback{
-    margin-right: 260px;
-    width: 30px;
-    height: 30px;
+    margin-right: 190px;
+    width: 50px;
+    height: 50px;
 }
 .success{
     margin-top: 500px;
@@ -49,7 +49,7 @@
 }
 .pay{
     margin-top: 50px;
-    font-size: 30px;
+    font-size: 40px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
     margin-left: 20px;
