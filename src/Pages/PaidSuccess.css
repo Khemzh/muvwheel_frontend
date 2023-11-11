@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.bg {
+.bg1 {
     
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +17,7 @@
     
 }
 
-.body {
+.body1 {
     margin-left: auto;
     margin-right: auto;
    
@@ -28,7 +28,7 @@
     padding-top: 40px;
 }
 
-.howtopay {
+.howtopay1 {
     margin-right: 210px;
     font-size: 50px;
     font-family: "Poppins", cursive;
@@ -36,18 +36,18 @@
 }
 
 
-.goback{
+.goback1{
     margin-right: 190px;
     width: 50px;
     height: 50px;
 }
-.success{
+.success1{
     margin-top: 500px;
     width: 200px;
     height: 200px;
     margin-left: 400px;
 }
-.pay{
+.pay1{
     margin-top: 50px;
     font-size: 40px;
     font-family: "Poppins", cursive;
