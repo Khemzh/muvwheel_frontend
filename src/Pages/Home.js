@@ -15,19 +15,56 @@ const PopupMenu = () => {
   const [val, setVal] = useState('ต้องการจะไปที่ไหน ?')
 
 const [listBus,listbus] = useState(<div className='showBus' onClick={() => click(mainbox)}> 
-        <img className='bus' src ="/img/icon _car outline_.png" alt=" " />
-        <div className='listOfBus'>
+        <div className='bus3'>
+          <img className='bus' src ="/img/icon _car outline_.png" alt=" " />
+        </div>
+        <ul>
+          <ol>
+          <div className='listOfBus' >
               <p className='number'>
                   50
               </p>
               <p className='busToBus'>
                   A &rarr; B
-                  <div className='whiteLine'>Z
+                  <div className='whiteLine'>
+                  
+              </div>
+              </p>
+              <p className='number'>
+                  50
+              </p>
+              <p className='busToBus'>
+                  A &rarr; B
+                  <div className='whiteLine'>
+                  
+              </div>
+              </p>
+              <p className='number'>
+                  50
+              </p>
+              <p className='busToBus'>
+                  A &rarr; B
+                  <div className='whiteLine'>
+                  
+              </div>
+              </p>
+              <p className='number'>
+                  50
+              </p>
+              <p className='busToBus'>
+                  A &rarr; B
+                  <div className='whiteLine'>
                   
               </div>
               </p>
               
           </div>
+          
+          </ol>
+        </ul>
+        
+          
+          
         </div>
 )
 const [mainbox, setmain] = useState(<div>

@@ -12,10 +12,67 @@
     justify-content: space-between;
   
 }
+.leftArrow{
+  padding-right: 0px;
+  padding-left: 40px;
+  padding-top: 50px;
+  width: 90px;
+}
+.headerText{
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.sentang{
+  font-size: 40px;
+  font-family: "Poppins", cursive;
+  color: rgb(255, 255, 255);
+}
+.info{
+  font-size: 30px;
+  font-family: "Poppins", cursive;
+  color: rgb(255, 255, 255);
+}
 
+.heart{
+  margin-right: 60px;
+  margin-top: 60px;
+  width: 60px;
+  height: 70px;
+}
 
+.map{
+  background-color: bisque;
+  border-radius: 50px;
+  width: 1080px;
+  height: 1710px;
+  position: absolute;
+}
 
+.blueBox{
+  /* display: flex; */
+  justify-content: center;
+  background-color: rgb(203, 196, 255);
+  border-radius: 50px;
+  width: 1080px;
+  height: 1290px;
+  margin-top: 420px;
+}
 
+.upArrow{
+  margin-top: 0px;
+  margin-left: 520px;
+  width: 50px;
+  height: 30px;
+}
+
+.showBox{
+  background-color: rgb(47, 29, 185);
+  border-radius: 50px;
+  width: 1080px;
+  height: 1180px;
+  margin-top: 80px;
+}
 
 @font-face {
     font-family: 'Poppins';
