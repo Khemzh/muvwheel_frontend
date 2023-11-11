@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ShowPath from './Pages/ShowPath';
+import PopupMenu from './Pages/Home';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ShowPath />
+    <PopupMenu />
   </React.StrictMode>
 );
 
