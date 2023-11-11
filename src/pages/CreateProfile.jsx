@@ -31,6 +31,7 @@ const CreateProfile = () => {
       .post('http://127.0.0.1:3001/register', payload)
       .then((res) => {
         if (res.status == 200) {
+          localStorage.setItem('token', res.data.token)
           navigate('/')
         }
       })
