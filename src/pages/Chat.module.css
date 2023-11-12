@@ -12,15 +12,15 @@
 }
 .bg{
     background-color: aliceblue;
-    width: 390px;
-    height: 924px;
+    width: 980px;
+    height: 1800px;
     margin-left: auto;
     margin-right: auto;
 }
 .head{
     background-color: #0032C8;
-    width: 390px;
-    height: 95px;
+    width: 980px;
+    height: 195px;
     padding-top: 35px;
     display: flex;
 }

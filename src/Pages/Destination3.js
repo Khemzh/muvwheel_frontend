@@ -1,11 +1,11 @@
-import destination3css from './Destination3.module.css';
+import destination3css from'./Destination3.module.css';
 function Destination3() {
     return (
         <div className={destination3css.App}>
             <div class={destination3css.bg}>
                 <div class={destination3css.pathbox}>
                     <p><button class={destination3css.goback}>
-                        <img src="/picture/Arrow 2.png"></img>
+                        <img class = {destination3css.gb} src="/picture/Arrow 2.png"></img>
                     </button>
                         <text class={destination3css.findway}>ค้นหาเส้นทาง</text></p>
                     <div class={destination3css.pu}><img class={destination3css.up} src="/picture/up.png"></img>
@@ -15,27 +15,32 @@ function Destination3() {
                     </div>
 
                 </div>
-                <div class={destination3css.lastsearch}>เร็วที่สุด
-                    <button class={destination3css.ls}>
+                <div class={destination3css.lastsearch}><p class = {destination3css.lstext}>เร็วที่สุด</p>
+                    <ul>
+                        <ol>
+                            <button class={destination3css.ls}>
+                                <button class={destination3css.vector}><img class = {destination3css.v} src="/picture/Vector.png"></img></button>
+                                <div class={destination3css.box}><button class={destination3css.car}><img class={destination3css.carf} src="/picture/car.png"></img>
+                                </button>
+                                    <p class={destination3css.lastsearchpath}>สาย34</p></div>
 
-                        <img class={destination3css.starf} src="/picture/car.png"></img>
-                        
-                        <button class={destination3css.close}><img src="/picture/Vector.png"></img></button>
-
-                        <p class={destination3css.lastsearchpath}>สาย34</p>
 
 
-
-                    </button>
+                            </button>
+                        </ol>
+                    </ul>
                 </div>
-                <div class={destination3css.save}>เปลี่ยนรถน้อยที่สุด
-                    <div><button class={destination3css.s}>
-
-                        <img class={destination3css.starf} src="/picture/car.png"></img>
-                        
-                        <button class={destination3css.close}><img src="/picture/Vector.png"></img></button>
-                        <p class={destination3css.savepath}>สาย59</p>
-                    </button></div>
+                <div class={destination3css.save}><p class = {destination3css.savetext}>เปลี่ยนรถน้อยที่สุด</p>
+                    <ul>
+                        <ol>
+                            <button class={destination3css.s}>
+                                <button class={destination3css.vector}><img class = {destination3css.v} src="/picture/Vector.png"></img></button>
+                                <div class={destination3css.box}><button class={destination3css.car}><img class={destination3css.carf} src="/picture/car.png"></img>
+                                </button>
+                                    <p class={destination3css.savepath}>สาย59</p></div>
+                            </button>
+                        </ol>
+                    </ul>
                 </div>
 
                 <button class={destination3css.search}>

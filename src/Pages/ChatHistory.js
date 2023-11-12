@@ -9,12 +9,12 @@ function ChatHistory() {
           }
     };
     return (
-        <div className={chathistorycss.App}>
-            <div class={chathistorycss.bg}>
-                <div class={chathistorycss.head}>
-                    <button class={chathistorycss.back}><img src="/picture/Arrow-left.png"></img></button>
-                    <p class={chathistorycss.contact}>Chat</p>
-                    <button class={chathistorycss.search}><img src="/picture/search-normal.png"></img></button>
+        <div className="App">
+            <div class="bg">
+                <div class="head">
+                    <button class="back"><img src="/picture/arrow-left.png"></img></button>
+                    <p class="contact">Chat</p>
+                    <button class="search"><img src="/picture/search-normal.png"></img></button>
                 </div>
                 <div class={chathistorycss.m}>Massage</div>
                 <ul>

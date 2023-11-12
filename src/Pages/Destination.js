@@ -5,7 +5,7 @@ function Destination() {
             <div class={destinationcss.bg}>
                 <div class={destinationcss.pathbox}>
                     <p><button class={destinationcss.goback}>
-                        <img src="/picture/Arrow 2.png"></img>
+                        <img class ={destinationcss.gb} src="/picture/Arrow 2.png"></img>
                     </button>
                         <text class={destinationcss.findway}>ค้นหาเส้นทาง</text></p>
                     <div class={destinationcss.pu}><img class={destinationcss.up} src="/picture/up.png"></img>

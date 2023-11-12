@@ -73,7 +73,7 @@
 
 }
 .lastsearch{
-    margin-right: 300px;
+    margin-right: 340px;
     margin-top: 30px;
     font-size: 15px;
     font-family: "Poppins", cursive;
@@ -100,27 +100,27 @@
     
 }
 .close{
-    margin-left: 372px;
-    
+    margin-left: 330px;
+    margin-top: 18px;
     width: 10px;
     height: 12px;
 
-}
+}   
 
 .starf{
-    margin-right: 10px;
-}
-.star{
     display: flex;
-    margin-top: -5px;
+    margin-top: 17px;
+    margin-left: 5px;
 }
 
+
 .save{
-    margin-right: 300px;
+    margin-right: 274px;
     margin-top: 30px;
     font-size: 15px;
     font-family: "Poppins", cursive;
     color: #B0B0B0;
+    
 }
 .s{
     margin-top: 10px;
@@ -131,24 +131,23 @@
     
 }
 .lastsearchpath{
-    margin-top: -28px;
-    font-size: 17px;
+    margin-top: 11px;
+    font-size: 16px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -200px;
+    margin-left: -330px;
 }
 .savepath{
-    margin-top: -28px;
-    font-size: 17px;
+    margin-top: 11px;
+    font-size: 16px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -240px;
+    margin-left: -330px;
 }
-.box{
-    display: block;
-    margin-bottom: 50px;
-    height: 10px;
+.ls{
+    display: inline-flex;
 }
+.s{display: inline-flex;}
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');

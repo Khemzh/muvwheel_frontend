@@ -1,11 +1,35 @@
 import destination2css from './Destination2.module.css';
+import React, { useEffect, useState } from 'react';
 function Destination2() {
+    const [isPopupVisible, setPopupVisible] = useState(false);
+
+    const togglePopup = () => {
+        setPopupVisible(!isPopupVisible);
+    };
+    const [isPopupVisible2, setPopupVisible2] = useState(false);
+
+    const togglePopup2 = () => {
+        setPopupVisible2(!isPopupVisible2);
+    };
+    const [Close, setClose] = useState(true);
+
+    const Closeclick = () => {
+        setClose(!Close);
+    };
+
+
+
+    const close = () => {
+        setClose(!close);
+
+    };
     return (
         <div className={destination2css.App}>
+
             <div class={destination2css.bg}>
                 <div class={destination2css.pathbox}>
                     <p><button class={destination2css.goback}>
-                        <img src="/picture/Arrow 2.png"></img>
+                        <img class={destination2css.gb} src="/picture/Arrow 2.png"></img>
                     </button>
                         <text class={destination2css.findway}>ค้นหาเส้นทาง</text></p>
                     <div class={destination2css.pu}><img class={destination2css.up} src="/picture/up.png"></img>
@@ -15,31 +39,48 @@ function Destination2() {
                     </div>
 
                 </div>
-                <div class={destination2css.lastsearch}>ค้นหาล่าสุด
+                <div class={destination2css.lastsearch}><p class={destination2css.lstext}>ค้นหาล่าสุด</p>
                     <ul>
                         <ol>
-                            <button class={destination2css.ls}>
-                                <button class={destination2css.close}><img src="/picture/icon-close-512 1.png"></img></button>
-                                <div class={destination2css.box}><button class={destination2css.star}><img class={destination2css.starf} src="/picture/Star_fill.png"></img>
-                                </button>
-                                    <p class={destination2css.lastsearchpath}>สยามพารากอน</p></div>
+                            {Close && (
+                                <div>
+                                    <button class={destination2css.ls}  >
+                                        <button class={destination2css.close} onClick={Closeclick} ><img class={destination2css.c} src="/picture/icon-close-512 1.png"></img></button>
+                                        <div class={destination2css.box}>
+                                            {/* <button class={destination2css.star} onClick={togglePopup}>
+                                    {!isPopupVisible &&(
+                                         <img class={destination2css.starf} src="/picture/Star_fill.png"></img>
+                                    )}
+                                    {isPopupVisible && (<img class={destination2css.starf} src="/picture/Star_fill2.png"></img>)}
+                                </button> */}
+                                            <p class={destination2css.lastsearchpath}>สยามพารากอน</p></div>
 
 
 
-                            </button>
+                                    </button>
+                                </div>
+
+                            )}
+
                         </ol>
                     </ul>
                 </div>
-                <div class={destination2css.save}>เส้นทางที่บันทึก
+                <div class={destination2css.save}><p class={destination2css.savetext}>เส้นทางที่บันทึก</p>
                     <ul>
-                        <li>
+                        <ol>
+                            
                             <button class={destination2css.s}>
-                                <button class={destination2css.close}><img src="/picture/icon-close-512 1.png"></img></button>
-                                <div class={destination2css.box}><button class={destination2css.star}><img class={destination2css.starf} src="/picture/Star_fill.png"></img>
+                                <button class={destination2css.close}><img class={destination2css.c} src="/picture/icon-close-512 1.png"></img></button>
+                                <div class={destination2css.box}><button class={destination2css.star} onClick={togglePopup2}>
+                                    {!isPopupVisible2 && (
+
+                                        <img class={destination2css.starf} src="/picture/Star_fill2.png"></img>
+                                    )}
+                                    {isPopupVisible2 && (<img class={destination2css.starf} src="/picture/Star_fill.png"></img>)}
                                 </button>
                                     <p class={destination2css.savepath}>ม.เกษตร</p></div>
                             </button>
-                        </li>
+                        </ol>
                     </ul>
                 </div>
 
