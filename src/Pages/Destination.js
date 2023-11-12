@@ -1,22 +1,22 @@
-import './Destination.css';
+import destinationcss from './Destination.module.css';
 function Destination() {
     return (
-        <div className="App">
-            <div class="bg">
-                <div class="pathbox">
-                    <p><button class="goback">
+        <div className={destinationcss.App}>
+            <div class={destinationcss.bg}>
+                <div class={destinationcss.pathbox}>
+                    <p><button class={destinationcss.goback}>
                         <img src="/picture/Arrow 2.png"></img>
                     </button>
-                        <text class="findway">ค้นหาเส้นทาง</text></p>
-                    <div class="pu"><img class="up" src="/picture/up.png"></img>
-                        <input class="position" type='text' placeholder='ตำแหน่งปัจจุบัน'></input></div>
-                    <div class="df"><img class="flag" src="/picture/flag.png"></img>
-                        <input class="destination" type='text' placeholder='ปลายทาง'></input>
+                        <text class={destinationcss.findway}>ค้นหาเส้นทาง</text></p>
+                    <div class={destinationcss.pu}><img class={destinationcss.up} src="/picture/up.png"></img>
+                        <input class={destinationcss.position} type='text' placeholder='ตำแหน่งปัจจุบัน'></input></div>
+                    <div class={destinationcss.df}><img class={destinationcss.flag} src="/picture/flag.png"></img>
+                        <input class={destinationcss.destination} type='text' placeholder='ปลายทาง'></input>
                     </div>
 
                 </div>
             
-                <button class="search">
+                <button class={destinationcss.search}>
                     ค้นหา
                 </button>
                 
