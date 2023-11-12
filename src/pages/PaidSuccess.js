@@ -5,7 +5,7 @@ function PaidSuccess() {
         <div className={paidsuccesscss.App}>
             <p class={paidsuccesscss.body1}>
                 {/* กล่องข้างใน */}
-                <div class={paidsuccesscss.bg} >
+                <div class={paidsuccesscss.bg1} >
                     {/* พื้นหลัง */}
                 </div>
             </p>

@@ -83,7 +83,7 @@
 //       return drawingManager
 // }
 const { Loader } = require("@googlemaps/js-api-loader");
-window.map = null;
+var map = null;
 var google = window.google;
 const loader = new Loader({
     apiKey: "AIzaSyCUP4lwuTEXSPnFmJIY_eGSEnOGDGPxMRg",
@@ -96,7 +96,7 @@ window.directionsRenderer = new google.maps.DirectionsRenderer();
 async function initMap() {
     loader.load().then(async () => {
         const { Map } = await google.maps.importLibrary("maps");
-        window.map = new Map(document.getElementById("map"), {
+        map = await new Map(document.getElementById("map"), {
             center: { lat: 13.7563, lng: 100.5018 },
             zoom: 17,
         });
@@ -109,12 +109,12 @@ async function initMap() {
             };
             localStorage.setItem('originPlace', JSON.stringify(userLatLng));
             // Center the map on the user's location
-            window.map.setCenter(userLatLng);
+            map.setCenter(userLatLng);
 
             // Add a marker at the user's location
             var userMarker = new google.maps.Marker({
                 position: userLatLng,
-                map: window.map,
+                map: map,
                 title: 'Your Location',
                 // icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
             });
@@ -159,7 +159,7 @@ async function calcRoute() {
             localStorage.setItem('transitDetails', JSON.stringify(transitDetails));
             console.log(transitDetails);
             window.directionsRenderer.setDirections(result);
-            window.directionsRenderer.setMap(window.map);
+            window.directionsRenderer.setMap(map);
             // setListStep(transitDetails);
             // Download result as JSON file
             // const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(result));

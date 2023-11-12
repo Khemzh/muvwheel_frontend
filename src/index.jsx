@@ -8,6 +8,9 @@ import Authen from './pages/Authen.jsx'
 import Destination from './pages/Destination.js'
 import Destination2 from './pages/Destination2.js'
 import Destination3 from './pages/Destination3.js'
+import Paid from './pages/Paid.js'
+import PaidSuccess from './pages/PaidSuccess.js'
+import ShowPath from './pages/ShowPath.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
     {
         path: '/destination3',
         element: <Destination3 />,
+    },
+    {
+        path: '/paid',
+        element: <Paid />,
+    },
+    {
+        path: '/paidsuccess',
+        element: <PaidSuccess />,
+    },
+    {
+        path: '/showpath',
+        element: <ShowPath />,
     },
 ])
 

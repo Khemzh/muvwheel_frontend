@@ -1,9 +1,8 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .App {
     font-family: "Poppins", cursive;
 }
@@ -11,24 +10,21 @@
 .App {
     text-align: center;
 }
-
 .bg {
     margin-left: auto;
     margin-right: auto;
     width: 980px;
     height: 1800px;
     background-color: aliceblue;
-
+    
 }
-
-.pathbox {
-    width: 430px;
-    height: 246px;
+.pathbox{
+    width: 980px;
+    height: 446px;
     background-color: #0032C8;
     border-radius: 20px;
 }
-
-.goback {
+.goback{
     margin-top: 20px;
     margin-right: 250px;
     width: 50px;
@@ -38,29 +34,26 @@
     width: 50px;
     height: 50px;
 }
-
-.findway {
-    margin-right: 135px;
-    font-size: 25px;
+.findway{
+    /* margin-top: 50px; */
+    margin-right: 290px;
+    font-size: 50px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
-
-.pu {
+.pu{
     display: flex;
-
+    
 }
-
-.up {
+.up{
     /* padding-top: 10px; */
     margin-top: 80px;
     margin-left: 50px;
     width: 50px;
     height: 50px;
 }
-
-.position {
-    margin-top: 30px;
+.position{
+    margin-top: 70px;
     margin-left: 10px;
     width: 800px;
     height: 80px;
@@ -68,20 +61,17 @@
     font-size: 30px;
     font-family: "Poppins", cursive;
 }
-
-.df {
+.df{
     display: flex;
-
+    
 }
-
-.flag {
+.flag{
     margin-top: 50px;
     margin-left: 50px;
     width: 50px;
     height: 50px;
 }
-
-.destination {
+.destination{
     margin-top: 40px;
     margin-left: 10px;
     width: 800px;
@@ -90,8 +80,7 @@
     font-size: 30px;
     font-family: "Poppins", cursive;
 }
-
-.search {
+.search{
     background-color: #0032C8;
     width: 400px;
     height: 130px;

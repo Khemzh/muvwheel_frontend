@@ -13,14 +13,9 @@
     width: 980px;
     height: 1800px;
     background-color: aliceblue;
-<<<<<<<< HEAD:src/pages/Paid.module.css
     border-radius: 50px;
     margin-top: 50px;
     
-========
-    border-radius: 30px;
-
->>>>>>>> origin/nutnai:src/pages/Paid.css
 }
 
 .body {
@@ -55,7 +50,6 @@
     margin-top: 100px;
     background-color: #000000;
 }
-<<<<<<<< HEAD:src/pages/Paid.module.css
 .goback{
     margin-right: 190px;
     width: 50px;
@@ -63,27 +57,12 @@
 }
 .cancle{
     font-size: 40px;
-========
-
-.goback {
-    margin-right: 65px;
-    width: 20px;
-    height: 10px;
-}
-
-.cancle {
-    font-size: 15px;
->>>>>>>> origin/nutnai:src/pages/Paid.css
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
     width: 800px;
     height: 100px;
     border-radius: 100px;
-<<<<<<<< HEAD:src/pages/Paid.module.css
     margin-top: 280px;
-========
-    margin-top: 300px;
->>>>>>>> origin/nutnai:src/pages/Paid.css
     background-color: #0032C8;
 }
 

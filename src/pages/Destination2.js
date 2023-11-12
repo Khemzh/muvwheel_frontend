@@ -54,9 +54,6 @@ function Destination2() {
                                     {isPopupVisible && (<img class={destination2css.starf} src="/picture/Star_fill2.png"></img>)}
                                 </button> */}
                                             <p class={destination2css.lastsearchpath}>สยามพารากอน</p></div>
-
-
-
                                     </button>
                                 </div>
 
