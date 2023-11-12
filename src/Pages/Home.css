@@ -185,6 +185,11 @@
   font-family: 'Poppins', cursive;
   color: rgb(255, 255, 255);
 }
+.map{
+    width: 100%;
+    height: 100%;
+}
+
 @font-face {
   font-family: 'Poppins';
   src:

@@ -1,16 +1,52 @@
 import App from '../App';
 import './Home.css'
 import React, { useState, useEffect } from 'react'
+import { initMaps, marker_api } from '../back/map_api';
 
 
+const Home = () => {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+  const [val, setVal] = useState('ต้องการจะไปที่ไหน ?');
 
-const PopupMenu = () => {
-  const [isPopupVisible, setPopupVisible] = useState(false)
+  useEffect(() => {
+    // Load Google Maps script dynamically
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCUP4lwuTEXSPnFmJIY_eGSEnOGDGPxMRg&callback=initMap`;
+    script.async = true;
+    script.defer = true;
+    script.onload = initMap;
+    document.head.appendChild(script);
+    if (initMap.map) {
+      // Add an event listener to the marker, e.g., a click event
+      markers.marker.addListener('click', () => {
+        // Handle marker click event
+        console.log('Marker clicked!');
+      });
+
+      // Optionally, you can center the map on the marker
+      initMap.map.setCenter(markers.marker.getPosition());
+
+      // Optionally, you can set the map zoom level
+      initMap.map.setZoom(12);
+    }
+    // Cleanup function to remove the script when the component unmounts
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []); // Empty dependency array ensures the useEffect runs once on component mount
+
+  const initMap = () => {
+    // Create a map centered at a specific location
+    const map = initMaps();
+  };
+
+  const markers = () => {
+    const marker = marker_api();
+  }
 
   const togglePopup = () => {
     setPopupVisible(!isPopupVisible)
   }
-  const [val, setVal] = useState('ต้องการจะไปที่ไหน ?')
 
   const [listBus, listbus] = useState(
     <div className="showBus" onClick={() => click(mainbox)}>
@@ -98,10 +134,12 @@ const PopupMenu = () => {
           </div>
           <input value={val} className="txt" />
           {mainbox}
-        </div>
+      </div>
       </div>
   }</div>
   )
 }
 
-export default PopupMenu
+
+
+export default Home;

@@ -7,6 +7,7 @@ import { auth } from '../firebase.config'
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth'
 import { toast, Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Authen = () => {
   const [otp, setOtp] = useState('')
@@ -66,8 +67,26 @@ const Authen = () => {
         setLoading(false)
         localStorage.setItem('ph', ph)
         localStorage.setItem('user', res.user.uid)
+        localStorage.setItem('firebase_token', res.user.accessToken)
 
-        navigate('/create')
+        let payload = {
+          uid: res.user.uid,
+          firebaseToken: res.user.accessToken,
+        }
+
+        axios
+          .post('http://127.0.0.1:3001/getuid', payload)
+          .then((res) => {
+            navigate('/')
+            localStorage.setItem('token', res.data.token)
+          })
+          .catch((error) => {
+            if (error.response.status == 404) {
+              navigate('/create')
+            } else {
+              alert('server error')
+            }
+          })
       })
       .catch((err) => {
         console.log(err)
