@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './pages/App.js'
-import Home from './pages/Home.js'
-import CreateProfile from './pages/CreateProfile.jsx'
-import Authen from './pages/Authen.jsx'
+import App from './temp/App.jsx
+import Home from './temp/Home.js'
+import CreateProfile from './temp/CreateProfile.jsx'
+import Authen from './temp/Authen.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
