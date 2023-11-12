@@ -1,0 +1,197 @@
+.App {
+    text-align: center;
+  }
+.bg{
+    position: absolute;
+    display: block;
+    width: 1080px;
+    height: 1710px;
+    background-color: #0032C8;
+  }
+.header{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.leftArrow{
+  padding-right: 0px;
+  padding-left: 40px;
+  padding-top: 50px;
+  width: 90px;
+}
+.headerText{
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.sentang{
+  font-size: 40px;
+  font-family: "Poppins", cursive;
+  color: rgb(255, 255, 255);
+}
+.info{
+  font-size: 30px;
+  font-family: "Poppins", cursive;
+  color: rgb(255, 255, 255);
+}
+
+.heart{
+  margin-right: 60px;
+  margin-top: 60px;
+  width: 60px;
+  height: 70px;
+}
+
+.map{
+  position: static;
+  background-color: bisque;
+  border-radius: 50px;
+  width: 1080px;
+  height: 1710px;
+  position: absolute;
+}
+
+.upp{
+  position: absolute;
+  justify-content: center;
+  background-color: #0032C8;
+  border-radius: 50px;
+  width: 1080px;
+  height: 200px;
+  margin-top: 1510px;
+}
+
+.blueBox{
+  /* display: flex; */
+  position: absolute;
+  justify-content: center;
+  background-color: #0032C8;
+  border-radius: 50px;
+  width: 1080px;
+  height: 1000px;
+  margin-top: 520px;
+}
+
+.upArrow{
+  margin-top: 30px;
+  margin-left: 520px;
+  width: 50px;
+  height: 30px;
+}
+
+.showBox{
+  position: absolute;
+  overflow:auto;
+  background-color: #182FA5;
+  width: 1080px;
+  height: 1090px;
+  margin-top: 50px;
+}
+
+.cntSign{
+  position: relative;
+  display: grid;
+  justify-content: end;
+  font-family: 'Poppins', cursive;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+
+}
+
+.startPoint{
+  position: relative;
+  /* display: flex;
+  justify-content: space-between; */
+  border: #ffffff solid;
+  background-color: rgb(251, 251, 251);
+  width: 980px;
+  height: 100px;
+  margin-left: 40px;
+  margin-top: 100px;
+  border-radius: 17px;
+  font-family: 'Poppins', cursive;
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+}
+
+.pin{
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 30px;
+  height: 40px;
+}
+
+.st{
+  position: absolute;
+  margin-top: 24px;
+  margin-left: 120px;
+
+}
+.cntSign{
+  position: absolute;
+  margin-top: 36px;
+  margin-left: 900px;
+  font-family: 'Poppins', cursive;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+}
+
+.line{
+  position: relative;
+  margin-top: 40px;
+  padding-top: 0;
+  margin-left: 540px;
+  height: 80px;
+}
+.straightLine{
+  display: flex;
+
+}
+
+.countSign{
+  position: relative;
+  height: 30px;
+  width: 100px;
+  margin-top: 80px;
+  font-family: 'Poppins', cursive;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.signBox{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border: #ffffff solid;
+  background-color: rgb(251, 251, 251);
+  width: 980px;
+  height: 100px;
+  margin-left: 40px;
+  margin-top: 30px;
+  border-radius: 17px;
+  font-family: 'Poppins', cursive;
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+}
+.sai{
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.btn{
+  border: #ffffff solid;
+  background-color: rgb(251, 251, 251);
+  width: 400px;
+  height: 100px;
+  border-radius: 17px;
+  margin-top: 500px;
+  font-family: 'Poppins', cursive;
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
+  }
