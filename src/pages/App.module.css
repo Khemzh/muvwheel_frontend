@@ -4,11 +4,12 @@
 }
 
 .bg {
+    /* display: block; */
+    
+    position: absolute;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1080px;
-    height: 2340px;
+    width: 1048px;
+    height: 1800px;
     background-color: #ffffff;
 }
 
@@ -19,17 +20,17 @@
   border-radius: 50%;
   display: inline-block;
   margin-left: 40px; */
-    margin-left: 200px;
-    width: 1200px;
-    height: 1200px;
-    border-radius: 0 0 0 1200px;
+    margin-left: 50px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 0 0 0 1000px;
     background-color: #0032C8
 }
 
 .helpBus {
     font-size: 100px;
-    padding-top: 400px;
-    padding-left: 300px;
+    padding-top: 200px;
+    padding-left: 100px;
     font-family: 'Poppins', cursive;
     color: aliceblue;
 
@@ -37,9 +38,9 @@
 
 .photo {
     margin-top: -500px;
-    margin-left: 200px;
-    width: 1000px;
-    height: 1200px;
+    margin-left: 80px;
+    width: 900px;
+    height: 1100px;
 
 }
 

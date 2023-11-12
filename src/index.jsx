@@ -11,6 +11,7 @@ import Destination3 from './pages/Destination3.js'
 import Paid from './pages/Paid.js'
 import PaidSuccess from './pages/PaidSuccess.js'
 import ShowPath from './pages/ShowPath.js'
+import Travel from './pages/Travel.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         path: '/showpath',
         element: <ShowPath />,
     },
+    {
+        path: '/travel',
+        element: <Travel />,
+    }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
