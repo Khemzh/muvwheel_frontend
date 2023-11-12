@@ -1,162 +1,92 @@
-import './Home.css';
+import homecss from './Home.module.css';
 import React, { useState, useEffect } from 'react';
-import { initMaps, marker_api } from '../back/map_api';
-// import {button} from 'react';
+import { initMaps } from '../back/map_api';
 
-const Home = () => {
-  const [isPopupVisible, setPopupVisible] = useState(false);
-  const [val, setVal] = useState('ต้องการจะไปที่ไหน ?');
+const PopupMenu = () => {
+    const [isPopupVisible, setPopupVisible] = useState(false);
 
-  useEffect(() => {
-    // Load Google Maps script dynamically
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCUP4lwuTEXSPnFmJIY_eGSEnOGDGPxMRg&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    script.onload = initMap;
-    document.head.appendChild(script);
-    if (initMap.map) {
-      // Add an event listener to the marker, e.g., a click event
-      markers.marker.addListener('click', () => {
-        // Handle marker click event
-        console.log('Marker clicked!');
-      });
-
-      // Optionally, you can center the map on the marker
-      initMap.map.setCenter(markers.marker.getPosition());
-
-      // Optionally, you can set the map zoom level
-      initMap.map.setZoom(12);
-    }
-    // Cleanup function to remove the script when the component unmounts
-    return () => {
-      document.head.removeChild(script);
+    const togglePopup = () => {
+        setPopupVisible(!isPopupVisible);
     };
-  }, []); // Empty dependency array ensures the useEffect runs once on component mount
+    const [val, setVal] = useState('ต้องการจะไปที่ไหน ?')
 
-  const initMap = () => {
-    // Create a map centered at a specific location
-    const map = initMaps();
-  };
-
-  const markers = () => {
-    const marker = marker_api();
-  }
-
-  const togglePopup = () => {
-    setPopupVisible(!isPopupVisible);
-  };
-
-const [listBus,listbus] = useState(<div className='showBus' onClick={() => click(mainbox)}> 
-        <div className='bus3'>
-          <img className='bus' src ="/img/icon _car outline_.png" alt=" " />
+    const [listBus, listbus] = useState(<div className={homecss.showBus} onClick={() => click(mainbox)}>
+        <div className={homecss.bus3}>
+            <img className={homecss.bus} src="/img/icon _car outline_.png" alt=" " />
         </div>
         <ul>
-          <ol>
-          <div className='listOfBus' >
-              <p className='number'>
-                  50
-              </p>
-              <p className='busToBus'>
-                  A &rarr; B
-                  <div className='whiteLine'>
-                  
-              </div>
-              </p>
-              <p className='number'>
-                  50
-              </p>
-              <p className='busToBus'>
-                  A &rarr; B
-                  <div className='whiteLine'>
-                  
-              </div>
-              </p>
-              <p className='number'>
-                  50
-              </p>
-              <p className='busToBus'>
-                  A &rarr; B
-                  <div className='whiteLine'>
-                  
-              </div>
-              </p>
-              <p className='number'>
-                  50
-              </p>
-              <p className='busToBus'>
-                  A &rarr; B
-                  <div className='whiteLine'>
-                  
-              </div>
-              </p>
-              
-          </div>
-          
-          </ol>
+            <ol>
+                <div className={homecss.listOfBus} >
+                    <p className={homecss.number}>
+                        50
+                    </p>
+                    <p className={homecss.busToBus}>
+                        A &rarr; B
+                        <div className={homecss.whiteLine}>
+
+                        </div>
+                    </p>
+
+
+                </div>
+
+            </ol>
         </ul>
-        
-          
-          
-        </div>
-)
-const [mainbox, setmain] = useState(<div>
-        <button className='busClick'  onClick={() => click(listBus)}> 
-        <img className='bus1' src ="/img/icon _car outline_.png" alt=" " /></button> 
 
-        </div>
-      </p>
+
 
     </div>
-  </div>
-  )
-  const [mainbox, setmain] = useState(<div>
-    <button className='busClick' onClick={() => click(listBus)}>
-      <img className='bus1' src="/img/icon _car outline_.png" alt=" " /></button>
+    )
+    const [mainbox, setmain] = useState(<div>
+        <button className={homecss.busClick} onClick={() => click(listBus)}>
+            <img className={homecss.bus1} src="/img/icon _car outline_.png" alt=" " /></button>
 
-  </div>
-  )
+    </div>
+    )
 
-  const click = listBus => {
-    setmain(listBus)
-  }
-  const click1 = mainbox => {
-    setmain(mainbox)
-  }
+    const click = listBus => {
+        setmain(listBus)
+    }
+    const click1 = mainbox => {
+        setmain(mainbox)
+    }
 
 
-  return (
-    <div className="App">
-      <div className='bg'>
-          <div className='map' id="map"></div>
-          <div className='header'>
-          <div class="dp">
-            <button className="bbb" onClick={togglePopup}><img className='bt' src="/img/icon _menu_.png"></img></button>
-            {isPopupVisible && (
-              <div className="popup-menu">
-                <ul>
-                  <ol>
-                    <div>
-                      <div className='pic'>
-                        <button className='back' onClick={togglePopup}><img className='bbb1' src="/img/leading-icon.png"></img></button>
-                        <img class="man" src="/img/disabled-guy.png"></img>
-                      </div>
-                      <button class="login">เข้าสู่ระบบ</button>
+    return (
+        <div className={homecss.App}>
+            <div className={homecss.bg} >
+                <div className={homecss.map} id='map'></div>
+            </div>
+            <div class={homecss.dp}>
+                <button className={homecss.bbb} onClick={togglePopup}>
+                    <img className={homecss.bt} src="/img/icon _menu_.png"></img>
+                </button>
+                {isPopupVisible && (
+                    <div className={homecss.popup_menu}>
+                        <ul>
+                            <ol>
+                                <div>
+                                    <div className={homecss.pic}>
+                                        <button className={homecss.back} onClick={togglePopup}><img className={homecss.bbb1} src="/img/leading-icon.png"></img></button>
+                                        <img class={homecss.man} src="/img/disabled-guy.png"></img>
+                                    </div>
+                                    <button class={homecss.login}>เข้าสู่ระบบ</button>
+                                </div>
+                            </ol>
+
+                        </ul>
                     </div>
-                  </ol>
+                )}
+                <div className={homecss.header}>
+                    <input value={val} className={homecss.txt} />
+                    {mainbox}
+                </div>
+                
+            </div>
 
-                </ul>
-              </div>
-            )}
-          </div>
-          <input value={val} className='txt' />
-          {mainbox}
         </div>
-      </div>
-
-    </div>
-  );
+    );
 }
 
 
-export default Home;
+export default PopupMenu;

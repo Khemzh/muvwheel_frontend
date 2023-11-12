@@ -1,6 +1,5 @@
 .App {
     display: flex;
-    justify-content: center;
     text-align: center;
     position: absolute;
   }
@@ -8,16 +7,13 @@
     /* display: grid; */
     padding-top: 30px;
     margin-left: 20px;
-    position: fixed;
 }
 .bg{
     position: absolute;
     display: block;
-    justify-content: center;
-    width: 1080px;
+    width: 1048px;
     height: 1700px;
     background-color: #fffdda;
-    margin-left: 1070px;
   }
 
 .txt{
@@ -41,13 +37,17 @@
 
 .busClick{
     position: relative;
-    margin-top: 1230px;
+    margin-top: 1250px;
     border: #0032C8 solid;
     border-radius: 15px;
     background-color: #0032C8;
-    width: 1080px;
-    height: 190px;
-    margin-left: -19px;
+    width: 1050px;
+    height: 210px;
+    margin-left: -17px;
+}
+.map{
+    position: absolute;
+    justify-content: left;
 }
 
 .bus1{
@@ -121,15 +121,16 @@
 .PopupMenu {
     text-align: center;
 }
-/* .dp{
-    display: flex;
-} */
+.dp{
+    margin-top: 110px;
+    margin-left: -8px;
+}
 .onclick{
     z-index: 1;
     position: absolute;
 }
 .bbb{
-    position: relative;
+    position: absolute;
     background: none;
     border: none;
     display: flex;
@@ -150,7 +151,7 @@
     width: 100px;
     height: 100px;
 }
-.popup-menu{
+.popup_menu{
     background-color: rgb(255, 255, 255);
     width: 550px;
     height: 1780px;
@@ -188,8 +189,11 @@
     color: rgb(255, 255, 255);
 }
 .map{
+    position: static;
+    display: flex;
     width: 100%;
     height: 100%;
+
 }
 
 @font-face {
