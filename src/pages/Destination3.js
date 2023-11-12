@@ -22,7 +22,7 @@ function Destination3() {
                                 <button class={destination3css.vector}><img class = {destination3css.v} src="/picture/Vector.png"></img></button>
                                 <div class={destination3css.box}><button class={destination3css.car}><img class={destination3css.carf} src="/picture/car.png"></img>
                                 </button>
-                                    <p class={destination3css.lastsearchpath}>สาย34</p></div>
+                                    <p class={destination3css.lastsearchpath}>สาย343</p></div>
 
 
 
