@@ -1,4 +1,4 @@
-import destinationcss from'./Destination.module.css';
+import destinationcss from './Destination.module.css';
 function Destination() {
     return (
         <div className={destinationcss.App}>
