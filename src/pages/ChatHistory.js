@@ -6,7 +6,7 @@ function ChatHistory() {
     const togglePopup = () => {
         if (isPopupVisible) {
             setPopupVisible(false);
-          }
+        }
     };
     return (
         <div className="App">
@@ -33,9 +33,16 @@ function ChatHistory() {
                                 
                                 )}
 
-                                <img></img>
+                            {isPopupVisible && (
+                                <div>
+                                    <img class="status" src="/picture/Rectangle 1.png"></img>
+                                </div>
 
-                            </button>
+                            )}
+
+                            <img></img>
+
+                        </button>
                     </ol>
                 </ul>
             </div>

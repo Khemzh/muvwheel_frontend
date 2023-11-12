@@ -1,20 +1,31 @@
 .App {
     font-family: "Poppins", cursive;
 }
+<<<<<<<< HEAD:src/pages/PaidSuccess.module.css
 .App {
     text-align: center;
 }
 
 .bg1 {
     
+========
+
+.bg {
+
+>>>>>>>> origin/nutnai:src/pages/PaidSuccess.css
     margin-left: auto;
     margin-right: auto;
     width: 980px;
     height: 1800px;
     background-color: aliceblue;
+<<<<<<<< HEAD:src/pages/PaidSuccess.module.css
     border-radius: 50px;
     margin-top: 50px;
     
+========
+    border-radius: 30px;
+
+>>>>>>>> origin/nutnai:src/pages/PaidSuccess.css
 }
 
 .body1 {
@@ -36,6 +47,7 @@
 }
 
 
+<<<<<<<< HEAD:src/pages/PaidSuccess.module.css
 .goback1{
     margin-right: 190px;
     width: 50px;
@@ -50,6 +62,25 @@
 .pay1{
     margin-top: 50px;
     font-size: 40px;
+========
+.goback {
+    margin-right: 65px;
+    width: 20px;
+    height: 10px;
+}
+
+.success {
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pay {
+
+    font-size: 35px;
+>>>>>>>> origin/nutnai:src/pages/PaidSuccess.css
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
     margin-left: 20px;
@@ -58,6 +89,7 @@
 .App {
     text-align: center;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
