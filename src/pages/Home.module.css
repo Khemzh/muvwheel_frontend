@@ -2,21 +2,23 @@
     display: flex;
     text-align: center;
     position: absolute;
-  }
-.header{
+}
+
+.header {
     /* display: grid; */
     padding-top: 30px;
     margin-left: 20px;
 }
-.bg{
+
+.bg {
     position: absolute;
     display: block;
     width: 1048px;
     height: 1700px;
     background-color: #fffdda;
-  }
+}
 
-.txt{
+.txt {
     position: relative;
     justify-content: center;
     margin-top: 60px;
@@ -28,14 +30,14 @@
     border-radius: 5px;
     font-family: "Poppins", cursive;
     font-size: 37px;
-    color:rgb(189, 189, 189)
-    
+    color: rgb(189, 189, 189)
 }
-.photo{
+
+.photo {
     width: 20px;
 }
 
-.busClick{
+.busClick {
     position: relative;
     margin-top: 1250px;
     border: #0032C8 solid;
@@ -45,40 +47,43 @@
     height: 210px;
     margin-left: -17px;
 }
-.map{
+
+.map {
     position: absolute;
     justify-content: left;
 }
 
-.bus1{
+.bus1 {
     position: relative;
     width: 40px;
     height: 40px;
     margin-left: 30px;
     margin-bottom: 70px;
 }
-.bus{
+
+.bus {
     position: relative;
     width: 40px;
     height: 40px;
     margin-left: 30px;
 }
 
-.bus3{
+.bus3 {
     padding-top: 40px;
 }
 
-.showBus{
+.showBus {
     position: relative;
     margin-top: 690px;
-    border: #0032C8 ;
+    border: #0032C8;
     border-radius: 15px;
     background-color: #0635c5;
     width: 1080px;
     height: 600px;
     margin-left: -19px;
 }
-.listOfBus{
+
+.listOfBus {
     position: relative;
     overflow: auto;
     display: block;
@@ -89,29 +94,32 @@
     height: 630px;
     margin-left: 0px;
 }
-.whiteLine{
+
+.whiteLine {
     position: relative;
     width: 1080px;
-    height:4px;
+    height: 4px;
     background-color: rgb(255, 255, 255);
     margin-top: 89px;
-    margin-left:-18px ;
+    margin-left: -18px;
 }
-.number{
+
+.number {
     position: relative;
     margin-left: 20px;
     margin-top: 10px;
     font-family: "Poppins", cursive;
     font-size: 40px;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255)
 }
-.busToBus{
+
+.busToBus {
     position: relative;
     margin-left: 20px;
     margin-top: 5px;
     font-family: "Poppins", cursive;
     font-size: 30px;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255)
 }
 
 .Popupmenu {
@@ -121,28 +129,33 @@
 .PopupMenu {
     text-align: center;
 }
-.dp{
+
+.dp {
     margin-top: 110px;
     margin-left: -8px;
 }
-.onclick{
+
+.onclick {
     z-index: 1;
     position: absolute;
 }
-.bbb{
+
+.bbb {
     position: absolute;
     background: none;
     border: none;
     display: flex;
     justify-content: left;
     margin-left: 63px;
-    
+
 }
-.bt{
+
+.bt {
     width: 90px;
     height: 90px;
 }
-.bbb1{
+
+.bbb1 {
     position: relative;
     background: none;
     border: none;
@@ -151,7 +164,8 @@
     width: 100px;
     height: 100px;
 }
-.popup_menu{
+
+.popup_menu {
     background-color: rgb(255, 255, 255);
     width: 550px;
     height: 1780px;
@@ -161,10 +175,12 @@
     z-index: 2;
     position: absolute;
 }
-.pic{
+
+.pic {
     display: flex;
     justify-content: space-between;
 }
+
 /* .back{
     margin-left: 10px ;
     height: 48px;
@@ -172,13 +188,14 @@
     background: none;
     border: none;
 } */
-.man{
+.man {
     margin-right: 50px;
     margin-top: 40px;
     width: 100px;
     height: 120px;
 }
-.login{
+
+.login {
     background-color: #0032C8;
     width: 450px;
     height: 100px;
@@ -188,7 +205,8 @@
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
-.map{
+
+.map {
     position: static;
     display: flex;
     width: 100%;
@@ -200,4 +218,3 @@
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-BlackItalic.ttf) format('truetype');
 }
-

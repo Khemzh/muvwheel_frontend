@@ -1,15 +1,16 @@
 .App {
     font-family: "Poppins", cursive;
 }
+
 .bg {
-    
+
     margin-left: auto;
     margin-right: auto;
     width: 390px;
     height: 935px;
     background-color: aliceblue;
     border-radius: 30px;
-    
+
 }
 
 .body {
@@ -31,20 +32,22 @@
 }
 
 
-.goback{
+.goback {
     margin-right: 65px;
     width: 20px;
     height: 10px;
 }
-.success{
+
+.success {
     margin-top: 200px;
-    width:100px;
+    width: 100px;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
 }
-.pay{
-    
+
+.pay {
+
     font-size: 35px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
@@ -53,6 +56,7 @@
 .App {
     text-align: center;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');

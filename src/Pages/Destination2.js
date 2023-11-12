@@ -23,9 +23,6 @@ function Destination2() {
                                 <div class="box"><button class="star"><img class="starf" src="/picture/Star_fill.png"></img>
                                 </button>
                                     <p class="lastsearchpath">สยามพารากอน</p></div>
-
-
-
                             </button>
                         </ol>
                     </ul>

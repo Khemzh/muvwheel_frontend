@@ -15,11 +15,10 @@ function Destination() {
                     </div>
 
                 </div>
-            
                 <button class="search">
                     ค้นหา
                 </button>
-                
+
             </div>
 
         </div>

@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .App {
     font-family: "Poppins", cursive;
 }
@@ -10,61 +11,71 @@
 .App {
     text-align: center;
 }
+
 .bg {
     margin-left: auto;
     margin-right: auto;
     width: 430px;
     height: 924px;
     background-color: aliceblue;
-    
+
 }
-.pathbox{
+
+.pathbox {
     width: 430px;
     height: 246px;
     background-color: #0032C8;
     border-radius: 20px;
 }
-.goback{
+
+.goback {
     margin-top: 20px;
     margin-right: 105px;
     width: 30px;
     height: 30px;
 }
-.findway{
+
+.findway {
     margin-right: 135px;
     font-size: 25px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
-.pu{
+
+.pu {
     display: flex;
-    
+
 }
-.up{
+
+.up {
     /* padding-top: 10px; */
     margin-top: 40px;
     margin-left: 20px;
     width: 20px;
     height: 20px;
 }
-.position{
+
+.position {
     margin-top: 30px;
     margin-left: 10px;
     width: 352px;
     height: 48px;
     border-radius: 10px;
 }
-.df{
+
+.df {
     display: flex;
-    
+
 }
-.flag{
+
+.flag {
     margin-top: 50px;
     margin-left: 20px;
     width: 20px;
     height: 20px;
 }
-.destination{
+
+.destination {
     margin-top: 40px;
     margin-left: 10px;
     width: 352px;
@@ -72,14 +83,16 @@
     border-radius: 10px;
 
 }
-.lastsearch{
+
+.lastsearch {
     margin-right: 340px;
     margin-top: 30px;
     font-size: 15px;
     font-family: "Poppins", cursive;
     color: #B0B0B0;
 }
-.search{
+
+.search {
     background-color: #0032C8;
     width: 232px;
     height: 71px;
@@ -91,63 +104,73 @@
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
-.ls{
+
+.ls {
     margin-top: 10px;
     border: 1px solid #B0B0B0;
     width: 388px;
     height: 52px;
     margin-left: 20px;
-    
+
 }
-.close{
+
+.close {
     margin-left: 330px;
     margin-top: 18px;
     width: 10px;
     height: 12px;
 
-}   
+}
 
-.starf{
+.starf {
     display: flex;
     margin-top: 17px;
     margin-left: 5px;
 }
 
 
-.save{
+.save {
     margin-right: 274px;
     margin-top: 30px;
     font-size: 15px;
     font-family: "Poppins", cursive;
     color: #B0B0B0;
-    
+
 }
-.s{
+
+.s {
     margin-top: 10px;
     border: 1px solid #B0B0B0;
     width: 388px;
     height: 52px;
     margin-left: 20px;
-    
+
 }
-.lastsearchpath{
+
+.lastsearchpath {
     margin-top: 11px;
     font-size: 16px;
     font-family: "Poppins", cursive;
     color: #000000;
     margin-left: -330px;
 }
-.savepath{
+
+.savepath {
     margin-top: 11px;
     font-size: 16px;
     font-family: "Poppins", cursive;
     color: #000000;
     margin-left: -330px;
 }
-.ls{
+
+.ls {
     display: inline-flex;
 }
-.s{display: inline-flex;}
+
+.s {
+    display: inline-flex;
+}
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');

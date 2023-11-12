@@ -27,7 +27,6 @@ const PopupMenu = () => {
                         </div>
                     </p>
 
-
                 </div>
 
             </ol>
@@ -81,7 +80,7 @@ const PopupMenu = () => {
                     <input value={val} className={homecss.txt} />
                     {mainbox}
                 </div>
-                
+
             </div>
 
         </div>

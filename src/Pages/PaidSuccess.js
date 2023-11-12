@@ -18,12 +18,12 @@ function PaidSuccess() {
                 เลือกวิธีการชำระเงิน
             </p>
             <p class="success">
-                        <img src="/picture/Untitled.png"></img>
-                    </p>
+                <img src="/picture/Untitled.png"></img>
+            </p>
             <p class="pay">
-                    ชำระเงินสำเร็จ
-                </p>
-           
+                ชำระเงินสำเร็จ
+            </p>
+
 
         </div>
 

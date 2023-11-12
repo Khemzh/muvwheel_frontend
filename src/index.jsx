@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App'
+import App from './pages/App.js'
 import Home from './pages/Home.js'
 import CreateProfile from './pages/CreateProfile.jsx'
 import Authen from './pages/Authen.jsx'

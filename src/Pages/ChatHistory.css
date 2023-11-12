@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .App {
     font-family: "Poppins", cursive;
 }
@@ -10,62 +11,75 @@
 .App {
     text-align: center;
 }
-.bg{
+
+.bg {
     background-color: aliceblue;
     width: 390px;
     height: 924px;
     margin-left: auto;
     margin-right: auto;
 }
-.head{
+
+.head {
     display: flex;
     width: 390px;
     height: 95px;
 }
-.back{
-    margin-left: 25px ;
-    
+
+.back {
+    margin-left: 25px;
+
 }
-.contact{
+
+.contact {
     margin-top: 30px;
     margin-left: 115px;
     font-size: 24px;
     font-family: "Poppins", cursive;
-    color: #000000; 
+    color: #000000;
 }
-.search{
+
+.search {
     margin-left: 110px;
 }
-.m{
+
+.m {
     display: flex;
     margin-left: 30px;
     margin-top: 20px;
 }
-.Chat{
+
+.Chat {
     display: flex;
     margin-top: 20px;
     width: 390px;
     border: 1px solid #000000;
 }
-.pic{
+
+.pic {
     margin-left: 30px;
 }
-.n{
+
+.n {
     margin-left: 10px;
 }
-.l{
+
+.l {
     margin-top: 30px;
     margin-left: -228px;
 }
-.t{
+
+.t {
     margin-left: 140px;
 }
-.status{
+
+.status {
     margin-left: 130px;
     width: 20px;
     height: 20px;
     margin-top: 30px;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');

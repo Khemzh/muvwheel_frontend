@@ -1,28 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .Popupmenu {
     font-family: "Poppins", cursive;
 }
 
-.dp{
+.dp {
     display: flex;
     justify-content: center;
     background-color: red;
 }
+
 .PopupMenu {
     text-align: center;
 }
+
 /* .dp{
     display: flex;
 } */
-.onclick{
+.onclick {
     z-index: 1;
     position: absolute;
 }
-.popup-menu{
+
+.popup-menu {
     background-color: aliceblue;
     width: 300px;
     height: 924px;
@@ -31,21 +35,25 @@
     z-index: 2;
     position: absolute;
 }
-.pic{
-    display: flex;    
+
+.pic {
+    display: flex;
 }
-.back{
-    margin-left: 10px ;
+
+.back {
+    margin-left: 10px;
     height: 48px;
     width: 48px;
 }
-.man{
+
+.man {
     margin-left: 200px;
     margin-top: -60px;
     width: 67px;
     height: 82px;
 }
-.login{
+
+.login {
     background-color: #0032C8;
     width: 217px;
     height: 47px;
@@ -56,6 +64,7 @@
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
 }
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');

@@ -19,12 +19,10 @@ function Destination3() {
                     <button class="ls">
 
                         <img class="starf" src="/picture/car.png"></img>
-                        
+
                         <button class="close"><img src="/picture/Vector.png"></img></button>
 
                         <p class="lastsearchpath">สาย34</p>
-
-
 
                     </button>
                 </div>
@@ -32,7 +30,7 @@ function Destination3() {
                     <div><button class="s">
 
                         <img class="starf" src="/picture/car.png"></img>
-                        
+
                         <button class="close"><img src="/picture/Vector.png"></img></button>
                         <p class="savepath">สาย59</p>
                     </button></div>
