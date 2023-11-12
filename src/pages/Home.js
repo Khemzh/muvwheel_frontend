@@ -1,14 +1,16 @@
 import homecss from './Home.module.css';
 import React, { useState, useEffect } from 'react';
 import { initMaps } from '../back/map_api';
+import { useNavigate } from 'react-router-dom';
 
 const PopupMenu = () => {
+    const navigate = useNavigate();
     const [isPopupVisible, setPopupVisible] = useState(false);
 
     const togglePopup = () => {
         setPopupVisible(!isPopupVisible);
     };
-    const [val, setVal] = useState('ต้องการจะไปที่ไหน ?')
+    // const [val, setVal] = useState('ต้องการจะไปที่ไหน ?')
 
     const [listBus, listbus] = useState(<div className={homecss.showBus} onClick={() => click(mainbox)}>
         <div className={homecss.bus3}>
@@ -16,17 +18,8 @@ const PopupMenu = () => {
         </div>
         <ul>
             <ol>
-                <div className={homecss.listOfBus} >
-                    <p className={homecss.number}>
-                        50
-                    </p>
-                    <p className={homecss.busToBus}>
-                        A &rarr; B
-                        <div className={homecss.whiteLine}>
-
-                        </div>
-                    </p>
-
+                <div className={homecss.listOfBus} id='listOfStep'>
+                    
                 </div>
 
             </ol>
@@ -77,7 +70,7 @@ const PopupMenu = () => {
                     </div>
                 )}
                 <div className={homecss.header}>
-                    <input value={val} className={homecss.txt} />
+                    <input className={homecss.txt} id='searchBar' value='ต้องการจะไปที่ไหน ?' onClick={() => navigate('/destination')} />
                     {mainbox}
                 </div>
 

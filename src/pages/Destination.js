@@ -1,5 +1,18 @@
+import React, { useEffect } from 'react';
 import './Destination.css';
+import { initAutocomplete, calcRoute } from '../back/map_api';
+import { useNavigate } from 'react-router-dom';
+
+function setupSearchBar() {
+    initAutocomplete(document.getElementById('origin'));
+    initAutocomplete(document.getElementById('destination'));
+}
+
 function Destination() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        setupSearchBar();
+    }, []);
     return (
         <div className="App">
             <div class="bg">
@@ -9,18 +22,17 @@ function Destination() {
                     </button>
                         <text class="findway">ค้นหาเส้นทาง</text></p>
                     <div class="pu"><img class="up" src="/picture/up.png"></img>
-                        <input class="position" type='text' placeholder='ตำแหน่งปัจจุบัน'></input></div>
+                        <input id='origin' class="position" type='text' placeholder='ตำแหน่งปัจจุบัน'></input></div>
                     <div class="df"><img class="flag" src="/picture/flag.png"></img>
-                        <input class="destination" type='text' placeholder='ปลายทาง'></input>
+                        <input id='destination' class="destination" type='text' placeholder='ปลายทาง'></input>
                     </div>
 
                 </div>
-                <button class="search">
+                <button class="search" onClick={async function(){let c = await calcRoute();if (c){navigate('/destination3')}}}>
                     ค้นหา
                 </button>
 
             </div>
-
         </div>
 
     );

@@ -1,5 +1,29 @@
 import './Destination3.css';
+import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+function setupSearchBar() {
+    let originBar = document.getElementById('origin')
+    let destinationBar = document.getElementById('destination')
+    try {
+        originBar.value = JSON.parse(localStorage.getItem('originPlace'));
+        originBar.value = 'ตำแหน่งปัจจุบัน';
+    } catch (e) {
+        originBar.value = localStorage.getItem('originPlace');
+    }
+    destinationBar.value = localStorage.getItem('destinationPlace');
+    originBar.disabled = true;
+    destinationBar.disabled = true;
+}
+
+function setupMethod() {
+
+}
+
 function Destination3() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        setupSearchBar();
+    }, []);
     return (
         <div className="App">
             <div class="bg">
@@ -9,36 +33,30 @@ function Destination3() {
                     </button>
                         <text class="findway">ค้นหาเส้นทาง</text></p>
                     <div class="pu"><img class="up" src="/picture/up.png"></img>
-                        <input class="position" type='text' placeholder='ตำแหน่งปัจจุบัน'></input></div>
+                        <input id='origin' class="position" type='text' placeholder='ตำแหน่งปัจจุบัน'></input></div>
                     <div class="df"><img class="flag" src="/picture/flag.png"></img>
-                        <input class="destination" type='text' placeholder='ปลายทาง'></input>
+                        <input id='destination' class="destination" type='text' placeholder='ปลายทาง'></input>
                     </div>
 
                 </div>
-                <div class="lastsearch">เร็วที่สุด
+                <div class="lastsearch" id='listStepFast'>เร็วที่สุด
                     <button class="ls">
-
                         <img class="starf" src="/picture/car.png"></img>
-
                         <button class="close"><img src="/picture/Vector.png"></img></button>
-
                         <p class="lastsearchpath">สาย34</p>
-
                     </button>
                 </div>
-                <div class="save">เปลี่ยนรถน้อยที่สุด
-                    <div><button class="s">
-
+                <div class="save" id='listStepMini'>เปลี่ยนรถน้อยที่สุด
+                    <button class="s">
                         <img class="starf" src="/picture/car.png"></img>
-
                         <button class="close"><img src="/picture/Vector.png"></img></button>
                         <p class="savepath">สาย59</p>
-                    </button></div>
+                    </button>
                 </div>
 
-                <button class="search">
+                {/* <button class="search">
                     ค้นหา
-                </button>
+                </button> */}
 
             </div>
 
