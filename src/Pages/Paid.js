@@ -1,36 +1,36 @@
-import './Paid.css';
+import paidcss from'./Paid.module.css';
 import React, { useState } from 'react';
 
 const Paid = ({ changePage }) => {
     
     return (
-        <div className="App">
-            <p class="body">
+        <div className={paidcss.App}>
+            <p class={paidcss.body}>
                 {/* กล่องข้างใน */}
-                <div class="bg" >
+                <div class={paidcss.bg} >
                     {/* พื้นหลัง */}
                 </div>
             </p>
 
 
-            <p class="howtopay">
-                <button class="goback">
+            <p class={paidcss.howtopay}>
+                <button class={paidcss.goback}>
                     <img src="/picture/Back-Button-PNG-Pic.png"></img>
                 </button>
-                เลือกวิธีการชำระเงิน
+                ชำระเงิน
             </p>
-            <p class="pay">
+            <p class={paidcss.pay}>
                 ชำระเงินผ่านพร้อมเพย์
             </p>
-            <p class="qrcode">
+            <p class={paidcss.qrcode}>
                 {/* qr */}
             </p>
 
-            <button class="done" onClick={() => changePage('/PaidSuccess')} >ชำระเงินเรียบร้อย</button>
+            <button class={paidcss.done} onClick={() => changePage('/PaidSuccess')} >ชำระเงินเรียบร้อย</button>
                 
 
             <p>
-                <button class="cancle">
+                <button class={paidcss.cancle}>
                     ยกเลิก
                 </button>
             </p>

@@ -1,26 +1,26 @@
-import './PaidSuccess.css';
+import paidsuccesscss from'./PaidSuccess.module.css';
 
 function PaidSuccess() {
     return (
-        <div className="App">
-            <p class="body1">
+        <div className={paidsuccesscss.App}>
+            <p class={paidsuccesscss.body1}>
                 {/* กล่องข้างใน */}
-                <div class="bg" >
+                <div class={paidsuccesscss.bg} >
                     {/* พื้นหลัง */}
                 </div>
             </p>
 
 
-            <p class="howtopay1">
-                <button class="goback1">
+            <p class={paidsuccesscss.howtopay1}>
+                <button class={paidsuccesscss.goback1}>
                     <img src="/picture/Back-Button-PNG-Pic.png"></img>
                 </button>
-                เลือกวิธีการชำระเงิน
+                ชำระเงิน
             </p>
             <p >
-                <img class="success1" src="/picture/Untitled.png"></img>
+                <img class={paidsuccesscss.success1} src="/picture/Untitled.png"></img>
             </p>
-            <p class="pay1">
+            <p class={paidsuccesscss.pay1}>
                 ชำระเงินสำเร็จ
             </p>
 

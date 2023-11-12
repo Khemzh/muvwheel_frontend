@@ -52,6 +52,7 @@
     height: 50px;
 }
 .position{
+    padding-left: 10px;
     margin-top: 70px;
     margin-left: 10px;
     width: 800px;
@@ -71,6 +72,7 @@
     height: 50px;
 }
 .destination{
+    padding-left: 10px;
     margin-top: 40px;
     margin-left: 10px;
     width: 800px;
@@ -115,31 +117,32 @@
     border: 1px solid #B0B0B0;
     width: 800px;
     height: 80px;
-    margin-left: -40px;
+    margin-left: -100px;
     
 }
-.Vector{
-    margin-left: 52px;
+.close{
+    margin-left: 752px;
     width: 20px;
     height: 20px;
     margin-top: 5px;
 
 }
-.v{
-    margin-top: 5px;
-    margin-bottom: -45px;
-    margin-left: 730px;
+.c{
     width: 20px;
     height: 20px;
 }
 
-.carf{
-    margin-left: 10px;
+.starf{
     margin-right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
-.car{
+/* .starff{
+    margin-left: -62px;
+    width: 50px;
+    height: 50px;
+} */
+.star{
     display: flex;
     margin-top: -15px;
     width: 50px;
@@ -156,15 +159,15 @@
     border: 1px solid #B0B0B0;
     width: 800px;
     height: 80px;
-    margin-left: -168px;
+    margin-left: -154px;
     
 }
 .lastsearchpath{
-    margin-top: -53px;
+    margin-top: -20px;
     font-size: 30px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -510px;
+    margin-left: -450px;
 }
 .savepath{
     margin-top: -53px;
@@ -177,6 +180,10 @@
     display: block;
     margin-bottom: 50px;
     height: 10px;
+}
+
+.wang{
+    display: none;
 }
 @font-face {
     font-family: 'Poppins';
