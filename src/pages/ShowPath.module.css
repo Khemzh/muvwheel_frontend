@@ -1,197 +1,229 @@
 .App {
     text-align: center;
-  }
-.bg{
+}
+
+.bg {
     position: absolute;
     display: block;
-    width: 1080px;
-    height: 1710px;
+    width: 1048px;
+    height: 1550px;
     background-color: #0032C8;
-  }
-.header{
+}
+
+.mapbord {
+    position: static;
+    margin-top: 150px;
+    border-radius: 50px;
+    margin-left: -5px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
-  
-}
-.leftArrow{
-  padding-right: 0px;
-  padding-left: 40px;
-  padding-top: 50px;
-  width: 90px;
-}
-.headerText{
-  margin-top: 40px;
-  margin-left: 50px;
-  margin-bottom: 30px;
-}
-.sentang{
-  font-size: 40px;
-  font-family: "Poppins", cursive;
-  color: rgb(255, 255, 255);
-}
-.info{
-  font-size: 30px;
-  font-family: "Poppins", cursive;
-  color: rgb(255, 255, 255);
 }
 
-.heart{
-  margin-right: 60px;
-  margin-top: 60px;
-  width: 60px;
-  height: 70px;
+.leftArrow {
+    position: relative;
+    padding-right: 0px;
+    padding-left: 40px;
+    padding-top: 50px;
+    width: 90px;
+    z-index: 1;
 }
 
-.map{
-  position: static;
-  background-color: bisque;
-  border-radius: 50px;
-  width: 1080px;
-  height: 1710px;
-  position: absolute;
+.headerText {
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    z-index: 1;
 }
 
-.upp{
-  position: absolute;
-  justify-content: center;
-  background-color: #0032C8;
-  border-radius: 50px;
-  width: 1080px;
-  height: 200px;
-  margin-top: 1510px;
+.sentang {
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(255, 255, 255);
 }
 
-.blueBox{
-  /* display: flex; */
-  position: absolute;
-  justify-content: center;
-  background-color: #0032C8;
-  border-radius: 50px;
-  width: 1080px;
-  height: 1000px;
-  margin-top: 520px;
+.info {
+    font-size: 30px;
+    font-family: "Poppins", cursive;
+    color: rgb(255, 255, 255);
 }
 
-.upArrow{
-  margin-top: 30px;
-  margin-left: 520px;
-  width: 50px;
-  height: 30px;
+.heart {
+    position: relative;
+    margin-right: 50px;
+    margin-top: 50px;
+    width: 60px;
+    height: 70px;
+    z-index: 1;
 }
 
-.showBox{
-  position: absolute;
-  overflow:auto;
-  background-color: #182FA5;
-  width: 1080px;
-  height: 1090px;
-  margin-top: 50px;
+.map {
+    position: static;
+    background-color: bisque;
+    border-radius: 50px;
+    width: 1080px;
+    height: 1710px;
+    position: absolute;
 }
 
-.cntSign{
-  position: relative;
-  display: grid;
-  justify-content: end;
-  font-family: 'Poppins', cursive;
-  font-size: 30px;
-  color: rgb(255, 255, 255);
-
+.upp {
+    position: absolute;
+    justify-content: center;
+    background-color: #0032C8;
+    border-radius: 50px;
+    width: 1080px;
+    height: 200px;
+    margin-top: 1370px;
+    margin-left: -17px;
 }
 
-.startPoint{
-  position: relative;
-  /* display: flex;
+.blueBox {
+    /* display: flex; */
+    position: absolute;
+    justify-content: center;
+    background-color: #0032C8;
+    border-radius: 50px;
+    width: 1050px;
+    height: 1040px;
+    margin-top: 520px;
+}
+
+.upArrow {
+    margin-top: 30px;
+    margin-left: 520px;
+    width: 50px;
+    height: 30px;
+}
+
+.showBox {
+    position: absolute;
+    background-color: #182FA5;
+    width: 1048px;
+    height: 925px;
+    margin-top: 50px;
+}
+.scroll{
+    overflow: auto;
+    height: 780px;
+}
+
+.cntSign {
+    position: relative;
+    display: grid;
+    justify-content: end;
+    font-family: 'Poppins', cursive;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    right: 50px;
+}
+
+.startPoint {
+    position: relative;
+    /* display: flex;
   justify-content: space-between; */
-  border: #ffffff solid;
-  background-color: rgb(251, 251, 251);
-  width: 980px;
-  height: 100px;
-  margin-left: 40px;
-  margin-top: 100px;
-  border-radius: 17px;
-  font-family: 'Poppins', cursive;
-  font-size: 36px;
-  color: rgb(0, 0, 0);
+    border: #ffffff solid;
+    background-color: rgb(251, 251, 251);
+    width: 980px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 10px;
+    border-radius: 17px;
+    font-family: 'Poppins', cursive;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
 }
 
-.pin{
-  position: absolute;
-  margin-top: 30px;
-  margin-left: 30px;
-  width: 30px;
-  height: 40px;
+.pin {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 30px;
+    height: 40px;
 }
 
-.st{
-  position: absolute;
-  margin-top: 24px;
-  margin-left: 120px;
-
-}
-.cntSign{
-  position: absolute;
-  margin-top: 36px;
-  margin-left: 900px;
-  font-family: 'Poppins', cursive;
-  font-size: 36px;
-  color: rgb(255, 255, 255);
-}
-
-.line{
-  position: relative;
-  margin-top: 40px;
-  padding-top: 0;
-  margin-left: 540px;
-  height: 80px;
-}
-.straightLine{
-  display: flex;
+.st {
+    position: absolute;
+    margin-top: 24px;
+    right: 30px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 600px;
 
 }
 
-.countSign{
-  position: relative;
-  height: 30px;
-  width: 100px;
-  margin-top: 80px;
-  font-family: 'Poppins', cursive;
-  font-size: 25px;
-  color: rgb(255, 255, 255);
+
+.line {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 0;
+    margin-left: 540px;
+    height: 80px;
 }
 
-.signBox{
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  border: #ffffff solid;
-  background-color: rgb(251, 251, 251);
-  width: 980px;
-  height: 100px;
-  margin-left: 40px;
-  margin-top: 30px;
-  border-radius: 17px;
-  font-family: 'Poppins', cursive;
-  font-size: 36px;
-  color: rgb(0, 0, 0);
-}
-.sai{
-  margin-top: 25px;
-  margin-left: 10px;
+.straightLine {
+    display: flex;
+
 }
 
-.btn{
-  border: #ffffff solid;
-  background-color: rgb(251, 251, 251);
-  width: 400px;
-  height: 100px;
-  border-radius: 17px;
-  margin-top: 500px;
-  font-family: 'Poppins', cursive;
-  font-size: 36px;
-  color: rgb(0, 0, 0);
+.countSign {
+    position: relative;
+    height: 30px;
+    width: 100px;
+    margin-top: 80px;
+    font-family: 'Poppins', cursive;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.signBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border: #ffffff solid;
+    background-color: rgb(251, 251, 251);
+    width: 980px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 30px;
+    border-radius: 17px;
+    font-family: 'Poppins', cursive;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+}
+
+.sai {
+    margin-top: 25px;
+    margin-left: 10px;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 340px;
+}
+
+.btn {
+    position: relative;
+    border: #ffffff solid;
+    background-color: rgb(251, 251, 251);
+    width: 400px;
+    height: 100px;
+    border-radius: 17px;
+    margin-top: 860px;
+    font-family: 'Poppins', cursive;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
 }
 
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
-  }
+}

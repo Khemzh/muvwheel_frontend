@@ -13,13 +13,13 @@
 .bg {
     margin-left: auto;
     margin-right: auto;
-    width: 980px;
-    height: 1800px;
+    width: 1048px;
+    height: 1700px;
     background-color: aliceblue;
     
 }
 .pathbox{
-    width: 980px;
+    width: 1048px;
     height: 446px;
     background-color: #0032C8;
     border-radius: 20px;
@@ -60,6 +60,7 @@
     border-radius: 10px;
     font-size: 30px;
     font-family: "Poppins", cursive;
+    padding: 15px;
 }
 .df{
     display: flex;
@@ -79,6 +80,7 @@
     border-radius: 10px;
     font-size: 30px;
     font-family: "Poppins", cursive;
+    padding: 15px;
 }
 .search{
     background-color: #0032C8;

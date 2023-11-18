@@ -1,6 +1,6 @@
 import homecss from './Home.module.css';
 import React, { useState, useEffect } from 'react';
-import { initMaps } from '../back/map_api';
+import { initMap } from '../back/map_api';
 import { useNavigate } from 'react-router-dom';
 import App from './App.js';
 
@@ -10,7 +10,7 @@ const PopupMenu = () => {
     useEffect(() => {
         const init = async () => {
             setLoading(true);
-            await initMaps();
+            await initMap();
         };
         init();
         setTimeout(() => {

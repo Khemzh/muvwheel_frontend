@@ -1,87 +1,3 @@
-// const directionsService = new window.google.maps.DirectionsService();
-// const directionsRenderer = new window.google.maps.DirectionsRenderer();
-
-// function initMaps() {
-//     const map = new window.google.maps.Map(document.getElementById('map'), {
-//         center: { lat: 13.7563, lng: 100.5018 },
-//         zoom: 8,
-//         gestureHandling: "greedy",
-//     });
-//     return map
-// }
-
-// function marker_api() {
-//     const position = { lat: 13.7563, lng: 100.5018 };
-//     const marker = new window.google.maps.Marker({
-//         map: initMaps(),
-//         position: position,
-//     });
-//     return marker
-// }
-
-// function draggableMarker() {
-//     const infoWindow = new window.google.maps.InfoWindow();
-//     const draggableMarker = new window.google.maps.Marker({
-//       map: initMaps(),
-//       position: { lat: 37.39094933041195, lng: -122.02503913145092 },
-//       gmpDraggable: true,
-//       title: "This marker is draggable.",
-//     });
-
-//     draggableMarker.addListener("dragend", (event) => {
-//       const position = draggableMarker.position;
-
-//       infoWindow.close();
-//       infoWindow.setContent(
-//         `Pin dropped at: ${position.lat()}, ${position.lng()}`,
-//       );
-//       infoWindow.open(draggableMarker.map, draggableMarker);
-//     });
-// }
-
-// function calcRoute() {
-//     var start = document.getElementById('start').value;
-//     var end = document.getElementById('end').value;
-//     var request = {
-//       origin: start,
-//       destination: end,
-//       travelMode: 'BUS'
-//     };
-//     directionsService.route(request, function(result, status) {
-//       if (status == 'OK') {
-//         directionsRenderer.setDirections(result);
-//       }
-//     });
-// }
-
-// function drawingManager() {
-//     const drawingManager = new window.google.maps.drawing.DrawingManager({
-//         drawingMode: window.google.maps.drawing.OverlayType.MARKER,
-//         drawingControl: true,
-//         drawingControlOptions: {
-//           position: window.google.maps.ControlPosition.TOP_CENTER,
-//           drawingModes: [
-//             window.google.maps.drawing.OverlayType.MARKER,
-//             window.google.maps.drawing.OverlayType.CIRCLE,
-//             window.google.maps.drawing.OverlayType.POLYGON,
-//             window.google.maps.drawing.OverlayType.POLYLINE,
-//             window.google.maps.drawing.OverlayType.RECTANGLE,
-//           ],
-//         },
-//         markerOptions: {
-//           icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-//         },
-//         circleOptions: {
-//           fillColor: "#ffff00",
-//           fillOpacity: 1,
-//           strokeWeight: 5,
-//           clickable: false,
-//           editable: true,
-//           zIndex: 1,
-//         },
-//       });
-//       return drawingManager
-// }
 const { Loader } = require("@googlemaps/js-api-loader");
 var map = null;
 var google = window.google;
@@ -127,11 +43,12 @@ async function initMap() {
         // Browser doesn't support geolocation
         window.alert("Browser doesn't support geolocation");
     }
+    console.log("{system} init map done");
+    return map
 }
 
-async function calcRoute() {
-    // var start = document.getElementById('start').value;
-    // var end = document.getElementById('end').value;
+
+async function calcRoute2() {
     let originplace = localStorage.getItem('originPlace')
     let destinationplace = localStorage.getItem('destinationPlace')
     try {
@@ -140,43 +57,94 @@ async function calcRoute() {
     } catch (e) {
         console.error('Error parsing originplace:', e);
     }
-    var request = {
+
+    var routesResponses = [];
+    //nomal search
+    await window.directionsService.route({
         origin: originplace,
-        // บริษัท เอ็มเอสเอ็ม เวนดิ้ง ซัพพลาย แอนด์ เซอร์วิส จำกัด
         destination: destinationplace,
         travelMode: 'TRANSIT',
         transitOptions: {
             modes: ['BUS'],  // ระบุว่าคุณต้องการใช้รถบัส
         },
-        language: 'th' // Add this line to request directions in Thai language
-    };
-    let c = false
-    await window.directionsService.route(request, function (result, status) {
-        if (status == 'OK') {
-
-            const transitDetails = result.routes[0].legs[0].steps
-            // .filter(step => step.travel_mode === 'TRANSIT')
-            // .map(step => step.instructions);
-            localStorage.setItem('transitDetails', JSON.stringify(transitDetails));
-            console.log(transitDetails);
-            window.directionsRenderer.setDirections(result);
-            window.directionsRenderer.setMap(map);
-            // setListStep(transitDetails);
-            // Download result as JSON file
-            // const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(result));
-            // const downloadAnchorNode = document.createElement('a');
-            // downloadAnchorNode.setAttribute("href", dataStr);
-            // downloadAnchorNode.setAttribute("download", "directions.json");
-            // document.body.appendChild(downloadAnchorNode); // required for firefox
-            // downloadAnchorNode.click();
-            // downloadAnchorNode.remove();
-            c = true
+        language: 'th',
+        provideRouteAlternatives: true,
+    }, function (response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            routesResponses.push(response);
         } else {
-            window.alert("ไม่พบเส้นทาง\nfrom : "+originplace+"\n to : "+destinationplace);
-            c = false;
+            window.alert('Directions request failed due to ' + status);
         }
-    })
-    return c
+    });
+    //avoiding tolls
+    await window.directionsService.route({
+        origin: originplace,
+        destination: destinationplace,
+        travelMode: 'TRANSIT',
+        transitOptions: {
+            modes: ['BUS'],  // ระบุว่าคุณต้องการใช้รถบัส
+        },
+        language: 'th',
+        provideRouteAlternatives: true,
+        avoidTolls: true,
+    }, function (response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            routesResponses.push(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+    //avoiding highways
+    await window.directionsService.route({
+        origin: originplace,
+        destination: destinationplace,
+        travelMode: 'TRANSIT',
+        transitOptions: {
+            modes: ['BUS'],  // ระบุว่าคุณต้องการใช้รถบัส
+        },
+        language: 'th',
+        provideRouteAlternatives: true,
+        avoidHighways: true,
+    }, function (response, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+            routesResponses.push(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+
+        //Results analysis and drawing of routes
+        var fastest = Number.MAX_VALUE,
+            shortest = Number.MAX_VALUE;
+        var fastestRoute = null,
+            shortestRoute = null;
+        routesResponses.forEach(function (res) {
+            res.routes.forEach(function (rou, index) {
+                let s = rou.legs[0].steps.filter(step => step.travel_mode === 'TRANSIT').length;
+                let t = rou.legs[0].duration.value;
+                console.log("number of bus in route " + index + ": ", s);
+                console.log("duration of route " + index + ": ", t);
+                if (s < shortest || shortestRoute != null && shortestRoute.legs[0].duration.value > t) {
+                    shortest = s;
+                    shortestRoute = rou;
+                }
+                if (t < fastest || fastestRoute != null && fastestRoute.legs[0].steps.filter(step => step.travel_mode === 'TRANSIT').length > s) {
+                    fastest = t;
+                    fastestRoute = rou;
+                }
+
+            })
+        })
+        console.log("shortest: ", shortest);
+        console.log("fastest: ", fastest);
+        window.routes = { fastestRoute: fastestRoute, shortestRoute: shortestRoute, all: routesResponses[0] };
+    });
+    console.log("{system} calculate route done");
+    if (routesResponses != []) {
+        return true
+    } else {
+        return false
+    }
+
 }
 
 function initAutocomplete(element) {
@@ -185,7 +153,7 @@ function initAutocomplete(element) {
         componentRestrictions: { 'country': ['TH'] },
         fields: ['place_id', 'geometry', 'name'],
     });
-    searchBar.addListener("place_changed", function () { let id = `${element.id}`;onPlaceChanged(searchBar, id) })
+    searchBar.addListener("place_changed", function () { let id = `${element.id}`; onPlaceChanged(searchBar, id) })
 }
 
 function onPlaceChanged(element, id) {
@@ -206,29 +174,4 @@ function onPlaceChanged(element, id) {
     }
 }
 
-// function setListStep(transitDetails) {
-//     const listStep = document.getElementById('listOfStep')
-//     const homecss = {
-//         number: "number-class",
-//         busToBus: "bus-to-bus-class",
-//         whiteLine: "white-line-class"
-//     };
-//     listStep.innerHTML = ""
-//     transitDetails.forEach(step => {
-//         const p1 = document.createElement('p');
-//         p1.className = homecss.number;
-//         p1.innerText = transitDetails[0].instructions;
-
-//         const p2 = document.createElement('p');
-//         p2.className = homecss.busToBus;
-//         p2.innerHTML = 'A &rarr; B <div className=${homecss.whiteLine}></div>';
-
-//         // Assuming you have a parent element to append these to:
-//         listStep.appendChild(p1);
-//         listStep.appendChild(p2);
-//     })
-// }
-
-window.addEventListener('load', initMap);
-// window.addEventListener('click', calcRoute);
-module.exports = { initMap, calcRoute, initAutocomplete, onPlaceChanged }
+module.exports = { initMap, initAutocomplete, onPlaceChanged, calcRoute2 }
