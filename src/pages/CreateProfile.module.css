@@ -1,0 +1,136 @@
+.App {
+    font-family: "Poppins", cursive;
+}
+
+.App {
+    text-align: center;
+}
+
+.bg {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 1048px;
+    height: 1700px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin-top: 50px;
+    
+}
+
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1048px;
+    height: 150px;
+    /* margin-top: 100px; */
+    background-color: #0032C8;
+    padding-top: 40px;
+}
+.goback{
+    margin-top: 50px;
+    margin-left: -900px;
+    width: 50px;
+    height: 50px;
+}
+.create{
+    margin-top: -70px;
+    font-size: 50px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+.user{
+    width: 150px;
+    height: 150px;
+    margin-left: 450px;
+    margin-top: 180px;
+}
+.info{
+    display:grid;
+    
+}
+.name{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+    width: 900px;
+    height: 70px;
+    
+    margin-top: 180px;
+}
+.surname{
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+    width: 900px;
+    height: 70px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.date{
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+    width: 900px;
+    height: 70px;
+        
+    margin-left: auto;
+    margin-right: auto;
+}
+.sex{
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+    width: 900px;
+    height: 70px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.phone{
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+    width: 900px;
+    height: 70px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.cc{
+    display: grid;
+}
+.confirm{
+    background-color: #0032C8;
+    border-radius: 40px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(255, 255, 255);
+    width: 700px;
+    height: 80px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cancle{
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: #182FA5;
+    margin-top: 20px;
+}
+.line{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
+}

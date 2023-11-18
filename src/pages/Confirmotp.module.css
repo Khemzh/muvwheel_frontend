@@ -1,0 +1,96 @@
+.App {
+    font-family: "Poppins", cursive;
+}
+
+.App {
+    text-align: center;
+}
+
+.bg {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 1048px;
+    height: 1700px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin-top: 50px;
+    
+}
+
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1048px;
+    height: 150px;
+    /* margin-top: 100px; */
+    background-color: #0032C8;
+    padding-top: 40px;
+}
+.goback{
+    margin-top: 50px;
+    margin-left: -900px;
+    width: 50px;
+    height: 50px;
+}
+.create{
+    margin-top: -70px;
+    font-size: 50px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+.t{
+    margin-top: 150px;
+    margin-left: -50px;
+    width: 700px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+.text{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    font-size: 30px;
+    font-family: "Poppins", cursive;
+    color: #52575C;
+}
+.otp{
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(0, 0, 0);
+}
+.bottom{
+    display: grid;
+    
+}
+.again{
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: #182FA5;
+}
+.next{
+    margin-top: 700px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: #ffffff;
+    background-color: #0032C8;
+    width: 800px;
+    height: 80px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.editphone{
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: #182FA5;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(/public/Poppins/Poppins-Black.ttf) format('truetype');
+}
