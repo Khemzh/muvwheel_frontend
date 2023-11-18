@@ -11,6 +11,7 @@ import Destination3 from './pages/Destination3.js'
 import Paid from './pages/Paid.js'
 import PaidSuccess from './pages/PaidSuccess.js'
 import ShowPath from './pages/ShowPath.js'
+import Travel from './pages/Travel.js'
 import CreateProfile2 from './pages/CreateProfile.js'
 import Signin from './pages/Signin.js'
 import Signup from './pages/Signup.js'
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
     path: 'user',
     element: <User/>
   },
+    {
+        path: '/travel',
+        element: <Travel />,
+    }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
