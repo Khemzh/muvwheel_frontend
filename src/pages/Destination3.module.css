@@ -162,18 +162,28 @@
     
 }
 .lastsearchpath{
-    margin-top: -53px;
+    margin-top: -48px;
     font-size: 30px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -510px;
+    margin-left: 60px;
+    text-align: left;
+    max-width: 680px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .savepath{
-    margin-top: -53px;
+    margin-top: -48px;
     font-size: 30px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -520px;
+    margin-left: 60px;
+    text-align: left;
+    max-width: 680px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .box{
     display: block;
