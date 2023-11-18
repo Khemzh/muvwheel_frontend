@@ -1,6 +1,9 @@
-import paidsuccesscss from'./PaidSuccess.module.css';
+import paidsuccesscss from './PaidSuccess.module.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function PaidSuccess() {
+    const navigate = useNavigate()
     return (
         <div className={paidsuccesscss.App}>
             <p class={paidsuccesscss.body1}>
@@ -12,14 +15,12 @@ function PaidSuccess() {
 
 
             <p class={paidsuccesscss.howtopay1}>
-                <button class={paidsuccesscss.goback1}>
+                <button class={paidsuccesscss.goback1} onClick={() => { navigate('/showpath') }}>
                     <img src="/picture/Back-Button-PNG-Pic.png"></img>
                 </button>
                 ชำระเงิน
             </p>
-            <p >
-                <img class={paidsuccesscss.success1} src="/picture/Untitled.png"></img>
-            </p>
+            <img class={paidsuccesscss.success1} src="/picture/Untitled.png"></img>
             <p class={paidsuccesscss.pay1}>
                 ชำระเงินสำเร็จ
             </p>

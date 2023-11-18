@@ -1,20 +1,22 @@
-import paidcss from'./Paid.module.css';
+import paidcss from './Paid.module.css';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
-const Paid = ({ changePage }) => {
-    
+const Paid = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={paidcss.App}>
             <p class={paidcss.body}>
-                {/* กล่องข้างใน */}
+                
                 <div class={paidcss.bg} >
-                    {/* พื้นหลัง */}
+
                 </div>
             </p>
 
 
             <p class={paidcss.howtopay}>
-                <button class={paidcss.goback}>
+                <button class={paidcss.goback} onClick={() => { navigate('/showpath') }}>
                     <img src="/picture/Back-Button-PNG-Pic.png"></img>
                 </button>
                 ชำระเงิน
@@ -23,11 +25,11 @@ const Paid = ({ changePage }) => {
                 ชำระเงินผ่านพร้อมเพย์
             </p>
             <p class={paidcss.qrcode}>
-                {/* qr */}
+            <img class={paidcss.qrcode} src="/picture/promptpay.jpg"></img>
             </p>
 
-            <button class={paidcss.done} onClick={() => changePage('/PaidSuccess')} >ชำระเงินเรียบร้อย</button>
-                
+            <button class={paidcss.done} onClick={() => navigate('/PaidSuccess')} >ชำระเงินเรียบร้อย</button>
+
 
             <p>
                 <button class={paidcss.cancle}>
