@@ -79,7 +79,7 @@ const PopupMenu = () => {
                                         <button className={homecss.back} onClick={togglePopup} ><img className={homecss.bbb1} src="/img/leading-icon.png"></img></button>
                                         <img class={homecss.man} src="/img/disabled-guy.png"></img>
                                     </div>
-                                    <button class={homecss.login}>เข้าสู่ระบบ</button>
+                                    <button class={homecss.login} onClick={()=>{navigate('/signin')}}>เข้าสู่ระบบ</button>
                                 </div>
                             </ol>
                         </ul>

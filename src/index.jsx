@@ -20,66 +20,66 @@ import User from './pages/User.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-  {
-    path: '/authen',
-    element: <Authen />,
-  },
-  {
-    path: '/create',
-    element: <CreateProfile />,
-  },
-  {
-    path: '/home',
-    element: <Home />,
-  },
-  {
-    path: '/destination',
-    element: <Destination />,
-  },
-  {
-    path: '/destination2',
-    element: <Destination2 />,
-  },
-  {
-    path: '/destination3',
-    element: <Destination3 />,
-  },
-  {
-    path: '/paid',
-    element: <Paid />,
-  },
-  {
-    path: '/paidsuccess',
-    element: <PaidSuccess />,
-  },
-  {
-    path: '/showpath',
-    element: <ShowPath />,
-  },
-  {
-    path: 'createprofile2',
-    element: <CreateProfile2 />
-  },
-  {
-    path: 'signin',
-    element: <Signin />
-  },
-  {
-    path: 'signup',
-    element: <Signup />
-  },
-  {
-    path: 'confirmotp',
-    element: <Confirmotp />
-  },
-  {
-    path: 'user',
-    element: <User/>
-  },
+    {
+        path: '/',
+        element: <Home />,
+    },
+    {
+        path: '/authen',
+        element: <Authen />,
+    },
+    {
+        path: '/create',
+        element: <CreateProfile />,
+    },
+    {
+        path: '/home',
+        element: <Home />,
+    },
+    {
+        path: '/destination',
+        element: <Destination />,
+    },
+    {
+        path: '/destination2',
+        element: <Destination2 />,
+    },
+    {
+        path: '/destination3',
+        element: <Destination3 />,
+    },
+    {
+        path: '/paid',
+        element: <Paid />,
+    },
+    {
+        path: '/paidsuccess',
+        element: <PaidSuccess />,
+    },
+    {
+        path: '/showpath',
+        element: <ShowPath />,
+    },
+    {
+        path: '/createprofile2',
+        element: <CreateProfile2 />
+    },
+    {
+        path: '/signin',
+        element: <Signin />
+    },
+    {
+        path: '/signup',
+        element: <Signup />
+    },
+    {
+        path: '/confirmotp',
+        element: <Confirmotp />
+    },
+    {
+        path: '/user',
+        element: <User />
+    },
     {
         path: '/travel',
         element: <Travel />,
@@ -88,9 +88,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>,
 )
 
 // localStorage.setItem('user', "S3cXt9L86OT1Ii1Vhc4zQ0kixZx2")

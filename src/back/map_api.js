@@ -17,8 +17,7 @@ async function initMap() {
             zoom: 17,
         });
     });
-    let pass = true
-    if (navigator.geolocation && !pass) {
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var userLatLng = {
                 lat: position.coords.latitude,
