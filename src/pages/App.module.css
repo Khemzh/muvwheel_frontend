@@ -5,7 +5,7 @@
 
 .bg {
     /* display: block; */
-    
+
     position: absolute;
     display: block;
     width: 1048px;
@@ -72,6 +72,33 @@
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+.elementToFadeInAndOut {
+    -webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+
+    0%,50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeinout {
+
+    0%,50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

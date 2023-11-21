@@ -10,9 +10,9 @@
 
     margin-left: auto;
     margin-right: auto;
-    width: 980px;
-    height: 1650px;
-    background-color: aliceblue;
+    width: 1048px;
+    height: 1610px;
+    background-color: white;
     border-radius: 50px;
     margin-top: 50px;
     
@@ -29,10 +29,18 @@
 }
 
 .howtopay {
-    margin-right: 210px;
+    margin: 0 auto 0 auto;
     font-size: 50px;
     font-family: "Poppins", cursive;
     color: rgb(0, 0, 0);
+}
+
+
+.goback {
+    position: absolute;
+    margin-left: -450px;
+    width: 50px;
+    height: 50px;
 }
 
 .pay {
@@ -49,11 +57,6 @@
     margin-right: auto;
     margin-top: 100px;
     background-color: #000000;
-}
-.goback{
-    margin-right: 190px;
-    width: 50px;
-    height: 50px;
 }
 .cancle{
     font-size: 40px;

@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './pages/App.jsx'
 import Home from './pages/Home.js'
-import CreateProfile from './pages/CreateProfile.jsx'
-import Authen from './pages/Authen.jsx'
 import Destination from './pages/Destination.js'
 import Destination2 from './pages/Destination2.js'
 import Destination3 from './pages/Destination3.js'
@@ -12,25 +9,19 @@ import Paid from './pages/Paid.js'
 import PaidSuccess from './pages/PaidSuccess.js'
 import ShowPath from './pages/ShowPath.js'
 import Travel from './pages/Travel.js'
-import CreateProfile2 from './pages/CreateProfile.js'
+import CreateProfile from './pages/CreateProfile.js'
 import Signin from './pages/Signin.js'
 import Signup from './pages/Signup.js'
 import Confirmotp from './pages/Confirmotp.js'
 import User from './pages/User.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+// import Authen from './pages/Authen.jsx'
+
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Home />,
-    },
-    {
-        path: '/authen',
-        element: <Authen />,
-    },
-    {
-        path: '/create',
-        element: <CreateProfile />,
     },
     {
         path: '/home',
@@ -61,8 +52,8 @@ const router = createBrowserRouter([
         element: <ShowPath />,
     },
     {
-        path: '/createprofile2',
-        element: <CreateProfile2 />
+        path: '/create',
+        element: <CreateProfile />
     },
     {
         path: '/signin',
@@ -83,7 +74,11 @@ const router = createBrowserRouter([
     {
         path: '/travel',
         element: <Travel />,
-    }
+    },
+    // {
+    //     path: '/auth',
+    //     element: <Authen />,
+    // },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

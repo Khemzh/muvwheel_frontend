@@ -94,6 +94,8 @@
     color: #B0B0B0;
 }
 .savetext{
+    position: relative;
+    text-align: left;
     margin-left: 40px;
     margin-top: 30px;
     font-size: 30px;
@@ -117,7 +119,7 @@
     border: 1px solid #B0B0B0;
     width: 800px;
     height: 80px;
-    margin-left: -100px;
+    margin-left: -55px;
     
 }
 .close{
@@ -150,16 +152,25 @@
 }
 
 .save{
-    display: flex;
+    display: block;
 }
     
     
 .s{
-    margin-top: 80px;
+    position: relative;
+    margin-top: 10px;
     border: 1px solid #B0B0B0;
     width: 800px;
     height: 80px;
-    margin-left: -154px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.listfav {
+    width: auto;
+    height: 500px;
+    margin-top: 20px;
+    overflow: auto;
     
 }
 .lastsearchpath{
@@ -174,7 +185,13 @@
     font-size: 30px;
     font-family: "Poppins", cursive;
     color: #000000;
-    margin-left: -520px;
+    text-align: left;
+    margin-left: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 700px;
+
 }
 .box{
     display: block;

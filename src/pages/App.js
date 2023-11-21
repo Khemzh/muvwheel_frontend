@@ -3,7 +3,7 @@ import React from 'react'
 
 function App() {
     return (
-        <div className={appcss.App}>
+        <div className={`${appcss.App} ${appcss.elementToFadeInAndOut}`}>
             <div className={appcss.bg}>
                 <div className={appcss.circle}>
                     <div className={appcss.helpBus}>

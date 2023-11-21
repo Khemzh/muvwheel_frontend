@@ -1,20 +1,34 @@
 import signupcss from './Signup.module.css';
-
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import PhoneInput from 'react-phone-input-2'
 
 function Signup() {
+    const [otp, setOtp] = useState('')
+    const [ph, setPh] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [showOTP, setShowOTP] = useState(false)
+    const [user, setUser] = useState(null)
+    const navigate = useNavigate()
     return (
         <div className={signupcss.App}>
             <div class={signupcss.body}>
 
                 <div class={signupcss.bg} >
-                    <button className={signupcss.gbb}> <img className={signupcss.gb} src="/picture/Arrow 2.png"></img> </button>
+                    <button className={signupcss.gbb}>
+                        <img className={signupcss.gb} src="/picture/Arrow 2.png" onClick={()=>{navigate('/')}}></img>
+                    </button>
                     <p className={signupcss.login}>ลงทะเบียน</p>
                     <div className={signupcss.box}>
-                        <input className={signupcss.phone} type='number' placeholder='เบอร์โทรศัพท์'></input>
-                        <button className={signupcss.lb}>เข้าสู่ระบบ</button>
+                        <PhoneInput inputClass={signupcss.phnumber}
+                            dropdownClass={signupcss.country}
+                            buttonClass={signupcss.btn}
+                            containerClass={signupcss.container}
+                            country={'th'} value={ph} onChange={setPh} />
+                        <button className={signupcss.lb} onClick={()=>{navigate('/confirmotp')}}>ลงทะเบียน</button>
                     </div>
                 </div>
-                <button className={signupcss.change}>เข้าสู่ระบบ</button>
+                <button className={signupcss.change} onClick={()=>{navigate('/signin')}}>เข้าสู่ระบบ</button>
             </div>
         </div>
     )

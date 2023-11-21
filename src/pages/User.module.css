@@ -11,8 +11,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 1048px;
-    height: 1700px;
-    background-color: aliceblue;
+    height: 1610px;
+    background-color: white;
     border-radius: 50px;
     margin-top: 50px;
     
@@ -99,7 +99,7 @@
 .phone{
     font-size: 40px;
     font-family: "Poppins", cursive;
-    color: rgb(0, 0, 0);
+    color: rgb(118, 118, 118);
     width: 900px;
     height: 70px;
     

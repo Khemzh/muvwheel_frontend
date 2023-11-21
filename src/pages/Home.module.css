@@ -123,11 +123,11 @@
 }
 
 .Popupmenu {
-  font-family: 'Poppins', cursive;
+    font-family: 'Poppins', cursive;
 }
 
 .PopupMenu {
-  text-align: center;
+    text-align: center;
 }
 
 .dp {
@@ -159,7 +159,7 @@
     position: relative;
     background: none;
     border: none;
-    margin-left: 0px;
+    margin-left: 40px;
     margin-top: 40px;
     width: 100px;
     height: 100px;
@@ -191,8 +191,8 @@
 .man {
     margin-right: 50px;
     margin-top: 40px;
-    width: 100px;
-    height: 120px;
+    width: 146px;
+    height: 170px;
 }
 
 .login {
@@ -206,6 +206,36 @@
     color: rgb(255, 255, 255);
 }
 
+.profile {
+    background-color: #0032C8;
+    width: 450px;
+    height: 130px;
+    border-radius: 80px;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: "Poppins", cursive;
+    color: rgb(255, 255, 255);
+}
+
+.userimg {
+    position: relative;
+    margin-left: 18px;
+    height: 105px;
+}
+
+.username {
+    font-size: 35px;
+    position: absolute;
+    margin-left: 145px;
+    margin-top: 220px;
+    width: 270px;
+    top: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
 .map {
     position: static;
     display: flex;
@@ -213,6 +243,20 @@
     height: 100%;
 
 }
+
+@-webkit-keyframes fadeinout {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
 
 @font-face {
     font-family: 'Poppins';

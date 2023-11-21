@@ -3,23 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { initMap } from '../back/map_api';
 import { useNavigate } from 'react-router-dom';
 import App from './App.js';
+import { getuser, setuser } from '../back/user_api';
 
 const PopupMenu = () => {
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const init = async () => {
-            setLoading(true);
-            await initMap();
-        };
-        init();
-        setTimeout(() => {
-            setLoading(false);
-        }, 3000);
-
-    }, []);
-
     const [isPopupVisible, setPopupVisible] = useState(false);
+    const [isLogin, setLogin] = useState(false);
 
     const togglePopup = () => {
         setPopupVisible(!isPopupVisible);
@@ -58,7 +47,23 @@ const PopupMenu = () => {
     }
     const [loading, setLoading] = useState(false);
 
+    function setupMenu() {
+        if (getuser('isLogin')) {
+            setLogin(true);
+        }
+    }
+    useEffect(() => {
+        const init = async () => {
+            setLoading(true);
+            await initMap();
+            setupMenu()
+        };
+        init();
+        setTimeout(() => {
+            setLoading(false);
+        }, 3500);
 
+    }, []);
 
     return (
         <div className={homecss.App}>
@@ -79,19 +84,26 @@ const PopupMenu = () => {
                                         <button className={homecss.back} onClick={togglePopup} ><img className={homecss.bbb1} src="/img/leading-icon.png"></img></button>
                                         <img class={homecss.man} src="/img/disabled-guy.png"></img>
                                     </div>
-                                    <button class={homecss.login} onClick={()=>{navigate('/signin')}}>เข้าสู่ระบบ</button>
+                                    {isLogin ? (
+                                        <button class={homecss.profile} onClick={() => { navigate('/user') }}>
+                                            <img className={homecss.userimg} src="/picture/User image.png"></img>
+                                            <p className={homecss.username}>{getuser("name")}&nbsp;&nbsp;&nbsp;{getuser("surname")}</p>
+                                        </button>
+                                    ) : (
+                                        <button class={homecss.login} onClick={() => { navigate('/signin') }}>เข้าสู่ระบบ</button>
+                                    )}
                                 </div>
                             </ol>
                         </ul>
                     </div>
                 )}
                 <div className={homecss.header}>
-                    <input className={homecss.txt} id='searchBar' value='ต้องการจะไปที่ไหน ?' onClick={() => navigate('/destination')} />
+                    <input className={homecss.txt} id='searchBar' value='ต้องการจะไปที่ไหน ?' onClick={() => { if (getuser('isLogin')) { navigate('/destination2') } else { navigate('/destination') } }} />
                     {mainbox}
                 </div>
 
             </div>
-            
+
         </div>
     );
 }

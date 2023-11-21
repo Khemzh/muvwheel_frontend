@@ -7,8 +7,6 @@
 }
 
 .bg {
-
-   
     margin-left: auto;
     margin-right: auto;
     width: 1048px;
@@ -41,50 +39,73 @@
     
 }
 .login{
-    font-size: 60px;
+    font-size: 80px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
-    margin-left: -700px;
+    margin-left: -550px;
     margin-top: 30px;
 }
 .box{
-    background-color: aliceblue;
+    
+    background-color: white;
     width: 900px;
     height: 900px;
-    
     border-radius: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 150px;
     display: grid;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.15);
 }
-.phone{
-    font-size: 40px;
-    font-family: "Poppins", cursive;
+.phnumber {
+    height: 148px !important;
+    width: 570px !important;
+    font-size: 45px !important;
+    margin-right: -70px !important;
+    border-radius: 20px !important;
+    right: 0px !important;
+}
+.container{
+    font-family: "Poppins", cursive !important;
     color: rgb(0, 0, 0);
-    width: 600px;
-    height: 100px;
-    margin-top: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    height: fit-content !important;
+    width: auto !important;
+    margin: 270px 0 10px 85px !important;
+    background-size: 50px !important;
+}
+.btn {
+    width: 150px !important;
+    background-color: white !important;
+    border-radius: 20px !important;
+}
+.btn .selected-flag .flag {
+    width: 50px !important;
+    height: 50px !important;
+}
+.country{
+    font-size: 32px !important;
+    max-height: 700px !important;
+    width: 530px !important;
+    size: 50px !important;
 }
 .lb{
-    font-size: 40px;
+    font-size: 50px;
     font-family: "Poppins", cursive;
     color: rgb(255, 255, 255);
-    background-color: #0032C8;
-    width: 600px;
-    height: 80px;
+    background-color: #182FA5;
+    width: 750px;
+    height: 110px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50px;
-    margin-top: -200px;
+    margin-top: -210px;
 }
 .change{
+    position: relative;
     font-size: 40px;
     font-family: "Poppins", cursive;
     color: #0032C8;
-    margin-top: 150px;
+    margin-top: 500px;
 }
 @font-face {
     font-family: 'Poppins';

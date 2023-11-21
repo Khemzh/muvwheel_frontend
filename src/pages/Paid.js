@@ -8,24 +8,23 @@ const Paid = () => {
     return (
         <div className={paidcss.App}>
             <p class={paidcss.body}>
-                
+
                 <div class={paidcss.bg} >
 
                 </div>
             </p>
-
-
+            <button class={paidcss.goback} onClick={() => { navigate('/showpath') }}>
+                <img src="/picture/Back-Button-PNG-Pic.png"></img>
+            </button>
             <p class={paidcss.howtopay}>
-                <button class={paidcss.goback} onClick={() => { navigate('/showpath') }}>
-                    <img src="/picture/Back-Button-PNG-Pic.png"></img>
-                </button>
+
                 ชำระเงิน
             </p>
             <p class={paidcss.pay}>
                 ชำระเงินผ่านพร้อมเพย์
             </p>
             <p class={paidcss.qrcode}>
-            <img class={paidcss.qrcode} src="/picture/promptpay.jpg"></img>
+                <img class={paidcss.qrcode} src="/picture/promptpay.jpg"></img>
             </p>
 
             <button class={paidcss.done} onClick={() => navigate('/PaidSuccess')} >ชำระเงินเรียบร้อย</button>

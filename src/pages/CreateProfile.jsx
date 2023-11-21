@@ -40,18 +40,6 @@ const CreateProfile = () => {
             })
     }
 
-    useEffect(() => {
-        let user = localStorage.getItem('user')
-        let ph = localStorage.getItem('ph')
-        if (user) {
-            setIsLogin(true)
-            setUid(user)
-        }
-        if (ph) {
-            setPh(ph)
-        }
-    }, [])
-
     if (isLogin) {
         return (
             <div className="p-5">

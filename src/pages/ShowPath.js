@@ -2,6 +2,8 @@ import showpathcss from './ShowPath.module.css'
 import React, { useState, useEffect } from 'react'
 import { initMap } from '../back/map_api'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { getuser } from '../back/user_api'
 
 var map = null
 
@@ -116,7 +118,10 @@ export default function ShowPath() {
     const navigate = useNavigate()
     useEffect(() => {
         setupmap();
-
+        checkfav();
+        updatehis();
+        let destinationTopObj = document.getElementById('destinationTop')
+        destinationTopObj.innerHTML = localStorage.getItem('destinationPlace')
     }, [])
 
     const [mainbox, setmain] = useState(
@@ -128,6 +133,66 @@ export default function ShowPath() {
 
     const Heartclick = () => {
         setHeart(!Heart)
+    }
+    async function fav() {
+        let url = 'http://127.0.0.1:3001' + '/favourite'
+        let payload = {
+            uid: getuser('uid'),
+            token: getuser('token'),
+            name: localStorage.getItem('destinationPlace')
+        }
+        if (!Heart) {
+            await axios
+                .post(url + '/create', payload)
+                .then((res) => {
+                    console.log(res.data)
+                }).catch((e) => {
+                    console.log('cant connect to server\n' + e.message)
+                })
+        } else {
+            await axios
+                .post(url + '/remove', payload)
+                .then((res) => {
+                    console.log(res.data)
+                }).catch((e) => {
+                    console.log('cant connect to server\n' + e.message)
+                })
+        }
+    }
+
+    async function updatehis() {
+        let url = 'http://127.0.0.1:3001' + '/history'
+        let payload = {
+            uid: getuser('uid'),
+            token: getuser('token'),
+            name: localStorage.getItem('destinationPlace')
+        }
+        await axios
+            .post(url, payload)
+            .then((res) => {
+                console.log(res.data)
+            }).catch((e) => {
+                console.log('cant connect to server\n' + e.message)
+            })
+    }
+    async function checkfav() {
+        let url = 'http://127.0.0.1:3001' + '/favourite/get'
+        let payload = {
+            uid: getuser('uid'),
+            token: getuser('token'),
+        }
+        await axios
+            .post(url, payload)
+            .then((res) => {
+                console.log(res.data.data)
+                res.data.data.forEach(element => {
+                    if (element.nameplace === localStorage.getItem('destinationPlace')) {
+                        setHeart(true)
+                    }
+                });
+            }).catch((e) => {
+                console.log('cant connect to server\n' + e.message)
+            })
     }
 
     const [listBus, listbus] = useState(
@@ -190,7 +255,7 @@ export default function ShowPath() {
                     <h4 className={showpathcss.info} id='destinationTop'>หอพักนิสิตจุฬา</h4>
                 </div>
                 <div>
-                    <button class={showpathcss.h} onClick={Heartclick}>
+                    <button class={showpathcss.h} onClick={async () => { await Heartclick(); fav(); }}>
                         {!Heart && <img class={showpathcss.heart} src="/img/heart.png"></img>}
                         {Heart && <img class={showpathcss.heart} src="/img/heartpink.png"></img>}
                     </button>

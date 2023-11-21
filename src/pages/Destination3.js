@@ -1,6 +1,7 @@
 import destination3css from './Destination3.module.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect } from 'react';
+import { getuser } from '../back/user_api';
 function setupSearchBar() {
     let originBar = document.getElementById('origin')
     let destinationBar = document.getElementById('destination')
@@ -59,7 +60,7 @@ function Destination3() {
             <div class={destination3css.bg}>
                 <div class={destination3css.pathbox}>
                     <p><button class={destination3css.goback}>
-                        <img class={destination3css.gb} src="/picture/Arrow 2.png" onClick={()=>{navigate('/destination')}}></img>
+                        <img class={destination3css.gb} src="/picture/Arrow 2.png" onClick={()=>{if (getuser('isLogin')){navigate('/destination2')}else{navigate('/destination')}}}></img>
                     </button>
                         <text class={destination3css.findway}>ค้นหาเส้นทาง</text></p>
                     <div class={destination3css.pu}><img class={destination3css.up} src="/picture/up.png"></img>

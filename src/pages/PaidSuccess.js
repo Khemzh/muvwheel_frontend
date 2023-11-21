@@ -13,11 +13,10 @@ function PaidSuccess() {
                 </div>
             </p>
 
-
+            <button class={paidsuccesscss.goback1} onClick={() => { navigate('/travel') }}>
+                <img src="/picture/Back-Button-PNG-Pic.png"></img>
+            </button>
             <p class={paidsuccesscss.howtopay1}>
-                <button class={paidsuccesscss.goback1} onClick={() => { navigate('/showpath') }}>
-                    <img src="/picture/Back-Button-PNG-Pic.png"></img>
-                </button>
                 ชำระเงิน
             </p>
             <img class={paidsuccesscss.success1} src="/picture/Untitled.png"></img>

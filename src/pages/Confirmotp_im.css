@@ -1,0 +1,7 @@
+.opt-container input {
+    height: 140px !important;
+    font-size: 40px !important;
+    border: 2px solid rgba(0, 0, 0, 0.5) !important;
+    border-radius: 25px;
+    margin: 0 10px 0 10px;
+}
